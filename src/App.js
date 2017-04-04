@@ -1,10 +1,6 @@
 import React from 'react';
 import { hashHistory } from 'react-router';
-import {
-  BrowserRouter as Router,
-  Route,
-  Link
-} from 'react-router-dom';
+import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
 import FirstPage from './components/FirstPage';
 import HelpPage from './components/HelpPage';
 import RepairPage from './components/RepairPage';
@@ -29,6 +25,6 @@ const App = () => (
       </ul>
     </div>
   </Router>
-)
+);
 
 export default App;
