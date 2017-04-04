@@ -1,4 +1,5 @@
 import React from 'react';
+import { hashHistory } from 'react-router';
 import {
   BrowserRouter as Router,
   Route,
@@ -14,7 +15,7 @@ const Help = () => <HelpPage />;
 const Repair = () => <RepairPage />;
 
 const App = () => (
-  <Router>
+  <Router history={hashHistory}>
     <div>
       <Link to="/">Lindström logo here</Link>
 

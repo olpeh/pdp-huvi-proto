@@ -2,6 +2,7 @@
   "name": "pdp-huvi-proto",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://olpeh.github.io/pdp-huvi-proto",
   "dependencies": {
     "prettier": "^0.22.0",
     "react": "^15.4.2",
@@ -9,13 +10,16 @@
     "react-router-dom": "^4.0.0"
   },
   "devDependencies": {
-    "custom-react-scripts": "0.0.23"
+    "custom-react-scripts": "0.0.23",
+    "gh-pages": "^0.12.0"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "format": "prettier --trailing-comma es5 --single-quote --write 'src/**/!(__snapshots__)/*.js*' 'src/*.js*'"
+    "format": "prettier --trailing-comma es5 --single-quote --write 'src/**/!(__snapshots__)/*.js*' 'src/*.js*'",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   }
 }
