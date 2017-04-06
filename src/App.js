@@ -13,15 +13,15 @@ const Repair = () => <RepairPage />;
 const App = () => (
   <Router history={hashHistory}>
     <div>
-      <Link to="/#/">Lindström logo here</Link>
+      <Link to="/">Lindström logo here!</Link>
 
-      <Route exact path="/#/" component={Home} />
-      <Route path="/#/help" component={Help} />
-      <Route path="/#/repair" component={Repair} />
+      <Route exact path="/" component={Home} />
+      <Route path="/help" component={Help} />
+      <Route path="/repair" component={Repair} />
 
       <ul>
-        <li><Link to="/#/help">Help</Link></li>
-        <li><Link to="/#/repair">Repair</Link></li>
+        <li><Link to="/help">Help</Link></li>
+        <li><Link to="/repair">Repair</Link></li>
       </ul>
     </div>
   </Router>
