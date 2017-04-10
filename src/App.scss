@@ -1,3 +1,5 @@
+@import 'commons/variables';
+
 .App {
   height: 100%;
   width: 100%;
@@ -6,7 +8,6 @@
   flex-wrap: nowrap;
   align-content: stretch;
   align-items: stretch;
-  padding: 20px;
 
   .header,
   .content,
@@ -19,6 +20,8 @@
   }
 
   .header {
+    padding: 20px;
+
     .logo {
       display: block;
       background: url('img/lindstrom.png') no-repeat center center;
@@ -45,16 +48,16 @@
 
       li {
         &:not(:first-child) {
-          margin-left: 10px;
+          margin-left: 25px;
         }
 
         a {
-          padding: 12px;
+          padding: 25px 50px;
           border-radius: 10px;
-          background-color: #003F72;
+          background-color: $primary-color;
           color: #fff;
           text-decoration: none;
-          font-size: 1.2rem;
+          font-size: 1.8rem;
           font-weight: bold
         }
       }
