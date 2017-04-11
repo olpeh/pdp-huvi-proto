@@ -1,10 +1,10 @@
 import React from 'react';
 import './FirstPage.scss';
-import ArrowDiv from './ArrowDiv';
+import CallToAction from './CallToAction';
 
 const FirstPage = () => (
   <div className="FirstPage">
-    <ArrowDiv text="Show id to open" />
+    <CallToAction text="Touch to start" />
   </div>
 );
 

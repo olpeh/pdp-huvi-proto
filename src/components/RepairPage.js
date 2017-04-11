@@ -1,9 +1,9 @@
 import React from 'react';
-import ArrowDiv from './ArrowDiv';
+import CallToAction from './CallToAction';
 
 const RepairPage = () => (
   <div>
-    <ArrowDiv text="Scan broken garment with reader" />
+    <CallToAction text="Scan broken garment with reader" />
   </div>
 );
 

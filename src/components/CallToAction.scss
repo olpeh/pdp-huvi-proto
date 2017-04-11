@@ -1,0 +1,18 @@
+@import '../commons/variables';
+
+.CallToAction {
+  width: 100%;
+
+   .CallToAction-wrapper {
+      border-top: 10px solid $secondary-color;
+      border-bottom: 10px solid $secondary-color;
+      text-align: center;
+
+      .CallToAction-heading {
+        text-transform: uppercase;
+        font-size: 4rem;
+        font-weight: bold;
+        color: $primary-color;
+      }
+   }
+}
