@@ -1,12 +1,10 @@
 import React from 'react';
 import './FirstPage.scss';
+import ArrowDiv from './ArrowDiv';
 
 const FirstPage = () => (
   <div className="FirstPage">
-    <div className="FirstPage-wrapper">
-      <div className="arrow" />
-      <h2 className="FirstPage-heading">Show ID to open</h2>
-    </div>
+    <ArrowDiv text="Show id to open" />
   </div>
 );
 

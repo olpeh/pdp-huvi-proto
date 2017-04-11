@@ -1,8 +1,9 @@
 import React from 'react';
+import ArrowDiv from './ArrowDiv';
 
 const RepairPage = () => (
   <div>
-    <h2>Repair</h2>
+    <ArrowDiv text="Scan broken garment with reader" />
   </div>
 );
 

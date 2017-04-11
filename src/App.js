@@ -23,6 +23,7 @@ const App = () => (
       </div>
       <div className="footer">
         <ul className="nav">
+          <li><Link className="back-link" to="/">Back</Link></li>
           <li><Link to="/help">Help</Link></li>
           <li><Link to="/repair">Repair</Link></li>
         </ul>
