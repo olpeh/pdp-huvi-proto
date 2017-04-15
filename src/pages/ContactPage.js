@@ -1,6 +1,6 @@
 import React from 'react';
 import './ContactPage.scss';
-import Footer from './Footer';
+import Footer from '../components/Footer';
 
 const ContactPage = () => (
   <div className="ContactPage">

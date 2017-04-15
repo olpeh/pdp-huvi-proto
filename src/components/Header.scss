@@ -1,0 +1,18 @@
+@import '../commons/variables';
+
+.Header {
+  display: flex;
+  align-self: auto;
+  order: 0;
+  flex: 1;
+  align-items: center;
+  padding: $base-padding;
+
+  .Header-logo {
+    display: block;
+    background: url('../img/lindstrom.png') no-repeat center center;
+    background-size: contain;
+    height: 80px;
+    width: 275px;
+  }
+}

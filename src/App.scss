@@ -10,26 +10,12 @@
   align-items: stretch;
   font-size: $base-font-size;
 
-  .header,
-  .content,
-  .footer {
+  .content {
     display: flex;
     align-self: auto;
     order: 0;
     flex: 1;
     align-items: center;
-  }
-
-  .header {
-    padding: $base-padding;
-
-    .logo {
-      display: block;
-      background: url('img/lindstrom.png') no-repeat center center;
-      background-size: contain;
-      height: 80px;
-      width: 275px;
-    }
   }
 
   .content {

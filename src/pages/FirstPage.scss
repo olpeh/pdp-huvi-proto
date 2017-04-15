@@ -17,7 +17,7 @@
     width: 33vw;
     height: 22vh;
     border-radius: $base-border-radius;
-    border: solid 10px $primary-color;
+    border: solid $base-border-width $primary-color;
     color: $primary-color;
     text-decoration: none;
     font-size: $base-font-size;
