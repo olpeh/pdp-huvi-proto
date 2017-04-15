@@ -6,6 +6,7 @@ import FirstPage from './pages/FirstPage';
 import InventoryPage from './pages/InventoryPage';
 import LaundryPage from './pages/LaundryPage';
 import ContactPage from './pages/ContactPage';
+import ChatPage from './pages/ChatPage';
 import ReportPage from './pages/ReportPage';
 import './App.scss';
 
@@ -13,6 +14,7 @@ const Home = () => <FirstPage />;
 const Inventory = () => <InventoryPage />;
 const Laundry = () => <LaundryPage />;
 const Contact = () => <ContactPage />;
+const Chat = () => <ChatPage />;
 const Report = () => <ReportPage />;
 
 const App = () => (
@@ -24,6 +26,7 @@ const App = () => (
         <Route path="/inventory" component={Inventory} />
         <Route path="/laundry" component={Laundry} />
         <Route path="/contact" component={Contact} />
+        <Route path="/chat" component={Chat} />
         <Route path="/report" component={Report} />
       </div>
     </div>
