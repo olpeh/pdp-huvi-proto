@@ -1,6 +1,6 @@
 import React from 'react';
 import { hashHistory } from 'react-router';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { HashRouter as Router, Route, Link } from 'react-router-dom';
 import FirstPage from './components/FirstPage';
 import InventoryPage from './components/InventoryPage';
 import LaundryPage from './components/LaundryPage';
