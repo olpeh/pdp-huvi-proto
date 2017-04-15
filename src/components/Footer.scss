@@ -15,12 +15,8 @@
     justify-content: space-around;
 
     li {
-      &:not(:first-child) {
-          margin-left: $base-padding;
-      }
-
       a {
-          padding: $base-padding 2 * $base-padding;
+          padding: $base-padding-vertical 2 * $base-padding;
           border-radius: $base-border-radius;
           background-color: $primary-color;
           color: #fff;
