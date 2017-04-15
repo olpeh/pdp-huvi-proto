@@ -1,10 +1,13 @@
 import React from 'react';
 import './FirstPage.scss';
-import CallToAction from './CallToAction';
+import { Link } from 'react-router-dom';
 
 const FirstPage = () => (
   <div className="FirstPage">
-    <CallToAction text="Touch to start" />
+    <Link className="FirstPage-link" to="/inventory">Inventory</Link>
+    <Link className="FirstPage-link" to="/laundry">Laundry information</Link>
+    <Link className="FirstPage-link" to="/contact">Contact Lindström</Link>
+    <Link className="FirstPage-link" to="/report">Report broken clothes</Link>
   </div>
 );
 
