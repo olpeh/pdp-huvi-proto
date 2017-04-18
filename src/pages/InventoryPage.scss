@@ -1,0 +1,101 @@
+@import '../commons/variables';
+
+.InventoryPage {
+	width: 100%;
+	height: 100%;
+	font-size: 1rem;
+	//padding-bottom: 1vh;
+
+	.title {		
+		font-size: 2rem;
+		padding: 0 5vh 0 5vh;
+	}
+
+	.Inventory {
+
+		width: 90%;
+		margin: 5vh 5vw 5vh 5vw; 
+		
+		.GarmentList {
+
+			//border: 1px solid black;
+			display: flex;
+	  		flex-direction: column;
+	  		justify-content: space-around;
+	  		flex-wrap: wrap;
+
+	  		.Garment {
+
+	  			//border: 1px solid red;
+	  			margin-top: 1vh;
+	  			margin-bottom: 1vh;
+	  			padding: 2vw;
+	  			box-shadow: 2px 2px 2px #888888;
+	  			background-color: #F8F8F8;
+
+	  			.stationary-info {
+
+	  				display: flex;
+	  				flex-direction: row;
+
+	  				.left {
+	  					//border: 1px dotted green;
+	  					//flex: 1;
+	  					height: 20vw;
+	  					width: 20vw;
+	  					overflow: hidden;
+
+	  					img {
+	  						//border: 1px solid #888;
+	  						//width: 100px;
+	  						//height: 50px;
+	  						width: 100px;
+	  					}
+
+	  				}
+	  				.right {
+	  					//border: 1px dotted blue;
+	  					flex: 1;
+	  					padding-left: 1vw;
+	  				}
+
+
+	  			}
+	  			
+	  			.expanding-info {
+	  				display: none;
+
+	  				&.expanded {
+	  					display:block;
+	  				}
+	  				//border: 1px dotted green;
+
+	  				.description {
+	  					padding-top: 2vh;
+	  					padding-bottom: 2vh;
+
+	  				}
+
+	  				.buttons {
+	  					//border: 1px dotted blue;
+	  					//padding-top: 1vh;
+	  					//padding-bottom: 1vh; 
+	  					display: flex; 
+	  					flex-direction: row;
+	  					flex-wrap: wrap;
+	  					justify-content: flex-end;
+	  					a {
+	  						margin-left: 1vw;
+	  						border-radius: $base-border-radius/2;
+	  						background-color: #0B3F8D;
+	  						padding: 1vh 2vw;
+	  						color: white;
+	  						//text-decoration: none;
+	  						font-weight: 1rem;
+	  					}
+	  				}
+	  			}
+	  		}
+  		} 
+	}
+}
