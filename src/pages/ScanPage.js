@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import QrReader from 'react-qr-reader';
-import { Link } from 'react-router-dom';
 import ReportForm from '../components/ReportForm';
 
 class ScanPage extends Component {
