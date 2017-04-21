@@ -16,12 +16,11 @@ class Item extends React.Component {
           </div>
 
           <div className="right">
-            
+
             <div className="name">
               <strong>{this.props.name}</strong>
-
             </div>
-            
+
             <div className="model">
               <strong>Model: </strong><strong>{this.props.model}</strong>
             </div>
