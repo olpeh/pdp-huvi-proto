@@ -19,7 +19,7 @@ const Contact = () => <ContactPage />;
 const Chat = () => <ChatPage />;
 const Report = () => <ReportPage />;
 const Scan = () => <ScanPage />;
-const Store = () => <StorePage />
+const Store = () => <StorePage />;
 
 const App = () => (
   <Router history={hashHistory}>
