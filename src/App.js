@@ -9,6 +9,7 @@ import ContactPage from './pages/ContactPage';
 import ChatPage from './pages/ChatPage';
 import ReportPage from './pages/ReportPage';
 import ScanPage from './pages/ScanPage';
+import StorePage from './pages/StorePage';
 import './App.scss';
 
 const Home = () => <FirstPage />;
@@ -18,6 +19,7 @@ const Contact = () => <ContactPage />;
 const Chat = () => <ChatPage />;
 const Report = () => <ReportPage />;
 const Scan = () => <ScanPage />;
+const Store = () => <StorePage />
 
 const App = () => (
   <Router history={hashHistory}>
@@ -31,6 +33,7 @@ const App = () => (
         <Route path="/chat" component={Chat} />
         <Route path="/report" component={Report} />
         <Route path="/scan" component={Scan} />
+        <Route path="/store" component={Store} />
       </div>
     </div>
   </Router>

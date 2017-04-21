@@ -8,6 +8,7 @@ const FirstPage = () => (
     <Link className="FirstPage-link" to="/laundry">Laundry information</Link>
     <Link className="FirstPage-link" to="/contact">Contact Lindström</Link>
     <Link className="FirstPage-link" to="/report">Report broken clothes</Link>
+    <Link className="FirstPage-link" to="/store">Store</Link>
   </div>
 );
 
