@@ -1,3 +1,5 @@
+@import 'commons/variables';
+
 html {
   height: 100%;
   width: 100%;
@@ -9,6 +11,8 @@ body {
   margin: 0;
   padding: 0;
   font-family: sans-serif;
+  background: $primary-background-color;
+  color: $primary-color;
 }
 
 #root {

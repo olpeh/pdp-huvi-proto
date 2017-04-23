@@ -1,0 +1,11 @@
+@import '../commons/variables';
+
+.LaundryInfo {
+  display: flex;
+  align-self: auto;
+  order: 0;
+  flex: 1;
+  justify-content: space-around;
+  background: $secondary-background-color;
+  margin: 0 $base-padding;
+}

@@ -4,24 +4,57 @@
   width: 100%;
   height: 100%;
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  flex-wrap: wrap;
+  flex-direction: column;
 
-  a {
+  .FirstPage-nav {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: $base-padding $base-padding / 2;
-    margin: 10px;
-    width: 33vw;
-    height: 22vh;
-    border-radius: $base-border-radius;
-    border: solid $base-border-width $primary-color;
-    color: $primary-color;
-    text-decoration: none;
-    font-size: $base-font-size;
-    font-weight: bold;
-    text-align: center;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: $base-padding;
+
+    .FirstPage-nav-link {
+      display: flex;
+      justify-content: center;
+      flex: 1;
+      flex-direction: column;
+      padding: $base-padding $base-padding / 2;
+      height: 22vh;
+      color: $primary-color;
+      background: $secondary-background-color;
+      text-decoration: none;
+      font-size: $base-font-size;
+      text-align: center;
+
+
+      &:not(:first-child) {
+        margin-left: $base-padding / 2;
+      }
+
+      &:not(:last-child) {
+        margin-right: $base-padding / 2;
+      }
+
+      .FirstPage-nav-link-icon {
+        display: block;
+        width: 100%;
+        height: 100%;
+        background: $secondary-background-color center center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        margin-bottom: $base-padding;
+
+        &.icon-contact {
+          background-image: url('../img/customerservice.png')
+        }
+
+        &.icon-inventory {
+          background-image: url('../img/multipleshirts.png')
+        }
+
+        &.icon-store {
+          background-image: url('../img/settings.png')
+        }
+      }
+    }
   }
 }
