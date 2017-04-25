@@ -1,5 +1,5 @@
 @import '../commons/variables';
-
+@import '../commons/mixins';
 
 .StorePage {
 	width:100%;
@@ -33,6 +33,7 @@
 	  			padding: 2vw;
 	  			//box-shadow: 2px 2px 2px #888888;
 	  			background-color: $secondary-background-color;
+				@include box-shadow();
 
 	  			.stationary-info {
 
