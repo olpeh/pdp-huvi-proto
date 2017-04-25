@@ -8,6 +8,8 @@
   align-items: center;
   justify-content: center;
   padding: $base-padding;
+  background: $header-background-color;
+  box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.2);
 
   .Header-logo {
     display: block;
