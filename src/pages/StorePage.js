@@ -4,7 +4,6 @@ import Store from '../components/Store';
 
 const StorePage = () => (
   <div className="StorePage">
-    <div className="title">Store</div>
     <Store />
   </div>
 );
