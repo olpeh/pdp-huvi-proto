@@ -6,7 +6,7 @@ class Garment extends React.Component {
     super(props);
     this.state = {
       expanded: false,
-      instances: this.props.instances
+      instances: this.props.instances,
     };
   }
 
@@ -35,12 +35,10 @@ class Garment extends React.Component {
               <strong>{this.props.name}</strong>
             </div>
             <div className="size">
-            <strong>Model: </strong> {this.props.model}
+              <strong>Model: </strong> {this.props.model}
             </div>
 
-            <div className="detailed-information">
-              
-            </div>
+            <div className="detailed-information" />
           </div>
         </div>
         <div className={expanded}>
@@ -51,8 +49,8 @@ class Garment extends React.Component {
           </div>
         </div>
       */}
-        {this.state.instances.map((instance) => (
-            <GarmentInstance 
+          {this.state.instances.map(instance => (
+            <GarmentInstance
               key={instance.id}
               name={this.props.name}
               model={this.props.model}
@@ -62,8 +60,8 @@ class Garment extends React.Component {
               size={instance.size}
               user_name={instance.user_name}
               location={instance.location}
-            />    
-          ))} 
+            />
+          ))}
 
         </div>
 

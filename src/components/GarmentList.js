@@ -5,7 +5,7 @@ class GarmentList extends React.Component {
   render() {
     return (
       <div className="GarmentList">
-        {this.props.garments.map((garment, index)  => (
+        {this.props.garments.map((garment, index) => (
           <Garment
             key={index}
             name={garment.name}
@@ -15,7 +15,7 @@ class GarmentList extends React.Component {
             img={garment.img}
           />
         ))}
-    </div>
+      </div>
     );
   }
 }
