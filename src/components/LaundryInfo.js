@@ -3,14 +3,11 @@ import moment from 'moment';
 import './LaundryInfo.scss';
 
 function renderWeekDayShort(weekDay) {
-  let classes = 'weekday-short';
-  if (weekDay.weekDay === moment().isoWeekday()) {
-    classes = 'weekday-short current';
-  }
-
   return (
-    <div className={classes}>
-      {weekDay.dayShort}
+    <div className="weekday-short">
+      {weekDay.weekDay === moment().isoWeekday()
+        ? <div className="current">{weekDay.dayShort}</div>
+        : weekDay.dayShort}
     </div>
   );
 }
