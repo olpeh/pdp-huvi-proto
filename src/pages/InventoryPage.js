@@ -4,7 +4,7 @@ import Inventory from '../components/Inventory';
 
 const InventoryPage = () => (
   <div className="InventoryPage">
-    <div className="title">Your Inventory</div>
+    <div className="title">My Workwear</div>
     <Inventory />
   </div>
 );

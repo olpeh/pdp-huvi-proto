@@ -1,3 +1,6 @@
+@import '../commons/variables';
+
+
 .StorePage {
 	width:100%;
 	height: 100%;
@@ -28,8 +31,8 @@
 				margin-top: 1vh;
 	  			margin-bottom: 1vh;
 	  			padding: 2vw;
-	  			box-shadow: 2px 2px 2px #888888;
-	  			background-color: #F8F8F8;
+	  			//box-shadow: 2px 2px 2px #888888;
+	  			background-color: $secondary-background-color;
 
 	  			.stationary-info {
 
