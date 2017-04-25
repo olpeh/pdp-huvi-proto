@@ -14,36 +14,52 @@ function renderWeekDayShort(weekDay) {
     </div>
   );
 }
-function renderWeekDayData(weekDay) {
-  if (!weekDay.data) {
-    return <div className="weekday-data" />;
-  }
 
+function renderWeekDayDataContents(weekDay, withDetails = false) {
   return (
     <div className="weekday-data">
       <div className="weekday-data-wrapper">
         <div className="weekday-data-icon jackets" />
         <div className="weekday-data-text">
-          x{weekDay.data.jackets}
+          x{weekDay.data.jackets.amount}
+        </div>
+        <div className="weekday-data-details">
+          {withDetails ? weekDay.data.jackets.details : null}
         </div>
       </div>
       <div className="weekday-data-wrapper">
         <div className="weekday-data-icon pants" />
         <div className="weekday-data-text">
-          x{weekDay.data.pants}
+          x{weekDay.data.pants.amount}
+        </div>
+        <div className="weekday-data-details">
+          {withDetails ? weekDay.data.pants.details : null}
         </div>
       </div>
       <div className="weekday-data-wrapper">
         <div className="weekday-data-icon shirts" />
         <div className="weekday-data-text">
-          x{weekDay.data.shirts}
+          x{weekDay.data.shirts.amount}
+        </div>
+        <div className="weekday-data-details">
+          {withDetails ? weekDay.data.shirts.details : null}
         </div>
       </div>
-      <div className="weekday-data-wrapper">
-        <div className="weekday-data-icon laundry" />
-      </div>
+      {withDetails
+        ? null
+        : <div className="weekday-data-wrapper">
+            <div className="weekday-data-icon laundry" />
+          </div>}
     </div>
   );
+}
+
+function renderWeekDayData(weekDay) {
+  if (!weekDay.data) {
+    return <div className="weekday-data" />;
+  }
+
+  return renderWeekDayDataContents(weekDay);
 }
 
 const LaundryInfo = () => {
@@ -70,9 +86,18 @@ const LaundryInfo = () => {
           day: 'Thursday',
           dayShort: 'Thu',
           data: {
-            jackets: 1,
-            pants: 2,
-            shirts: 3,
+            jackets: {
+              amount: 1,
+              details: 'Alepa Softshell Jacket',
+            },
+            pants: {
+              amount: 2,
+              details: 'Alepa T-Shirt',
+            },
+            shirts: {
+              amount: 3,
+              details: 'Alepa Trousers',
+            },
             laundryDay: true,
           },
         },
@@ -100,7 +125,17 @@ const LaundryInfo = () => {
           </div>
         ))}
       </div>
-      <span className="LaundryInfo-week-number">{moment().format('W')}</span>
+      <div className="LaundryInfo-details-wrapper">
+        <div className="LaundryInfo-details">
+          <div className="LaundryInfo-details-heading">
+            Clothes remaining until laundry day:
+          </div>
+          {renderWeekDayDataContents(weekData[0].weekDayData[3], true)}
+        </div>
+        <div className="LaundryInfo-week-number">
+          Week {moment().format('W')}
+        </div>
+      </div>
     </div>
   );
 };

@@ -24,7 +24,7 @@
 
   .LaundryInfo-week-calendar {
     display: flex;
-    flex: 18;
+    flex: 16;
     flex-direction: row;
     justify-content: space-around;
     align-content: stretch;
@@ -57,59 +57,6 @@
         }
       }
 
-      .weekday-data {
-        flex: 6;
-        align-items: stretch;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-
-        .weekday-data-wrapper {
-          display: flex;
-          flex: 1;
-          flex-direction: row;
-          justify-content: space-around;
-          align-items: center;
-          align-content: stretch;
-          margin: $base-padding-vertical / 2 $base-padding-horizontal;
-
-          &:first-child {
-            margin-top: $base-padding-vertical;
-          }
-
-          &:last-child {
-            margin-bottom: $base-padding-vertical;
-          }
-
-          .weekday-data-text {
-            align-self: center;
-          }
-
-          .weekday-data-icon {
-            text-align: right;
-            flex: 1;
-            height: 100%;
-            margin-right: 5px;
-
-            &.jackets {
-              background: url('../img/white/jacket.svg') no-repeat center center;
-            }
-
-            &.pants {
-              background: url('../img/white/pants.svg') no-repeat center center;
-            }
-
-            &.shirts {
-              background: url('../img/white/shirt.svg') no-repeat center center;
-            }
-
-            &.laundry {
-              background: url('../img/white/laundry.svg') no-repeat center center;
-            }
-          }
-        }
-      }
-
       .weekday-short {
         flex: 1;
         text-align: center;
@@ -118,6 +65,111 @@
         display: flex;
         align-items: center;
         justify-content: center;
+      }
+    }
+  }
+
+  .LaundryInfo-details-wrapper {
+    display: flex;
+    flex: 10;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: stretch;
+    margin: $base-padding-vertical 0;
+
+    .LaundryInfo-details {
+      background: $secondary-background-color;
+      padding: $base-padding-vertical $base-padding-horizontal;
+      flex: 3;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-content: stretch;
+
+      .LaundryInfo-details-heading {
+        flex: 1;
+      }
+
+      .weekday-data {
+        flex: 9;
+
+        .weekday-data-wrapper {
+          justify-content: flex-start;
+
+          .weekday-data-icon {
+            background-position: left;
+            flex: 1;
+          }
+
+          .weekday-data-text {
+            flex: 1;
+            font-size: $font-size-tiny;
+          }
+
+          .weekday-data-details {
+            flex: 6;
+          }
+
+        }
+      }
+    }
+
+    .LaundryInfo-week-number {
+      flex: 2;
+      text-align: right;
+      font-weight: bold;
+    }
+  }
+
+  .weekday-data {
+    flex: 6;
+    align-items: stretch;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    .weekday-data-wrapper {
+      display: flex;
+      flex: 1;
+      flex-direction: row;
+      justify-content: space-around;
+      align-items: center;
+      align-content: stretch;
+      margin: $base-padding-vertical / 2 $base-padding-horizontal;
+
+      &:first-child {
+        margin-top: $base-padding-vertical;
+      }
+
+      &:last-child {
+        margin-bottom: $base-padding-vertical;
+      }
+
+      .weekday-data-text {
+        align-self: center;
+      }
+
+      .weekday-data-icon {
+        text-align: right;
+        flex: 1;
+        height: 100%;
+        margin-right: 5px;
+
+        &.jackets {
+          background: url('../img/white/jacket.svg') no-repeat center center;
+        }
+
+        &.pants {
+          background: url('../img/white/pants.svg') no-repeat center center;
+        }
+
+        &.shirts {
+          background: url('../img/white/shirt.svg') no-repeat center center;
+        }
+
+        &.laundry {
+          background: url('../img/white/laundry.svg') no-repeat center center;
+        }
       }
     }
   }
