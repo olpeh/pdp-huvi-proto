@@ -5,26 +5,26 @@ import { Link } from 'react-router-dom';
 const Footer = ({ location }) => {
   const linkArray = [
     {
-      path: "/",
-      name: "My week",
-      iconClasS: "icon-my-week"
-  },
-     {
-      path: "/contact",
-      name: "Communication",
-      iconClasS: "icon-contact"
-  },
-     {
-      path: "/inventory",
-      name: "My workwear",
-      iconClasS: "icon-inventory"
+      path: '/',
+      name: 'My week',
+      iconClasS: 'icon-my-week',
     },
-     {
-      path: "/store",
-      name: "Linsdström Store",
-      iconClasS: "icon-store"
-    }
-  ]
+    {
+      path: '/inventory',
+      name: 'My workwear',
+      iconClasS: 'icon-inventory',
+    },
+    {
+      path: '/contact',
+      name: 'Communication',
+      iconClasS: 'icon-contact',
+    },
+    {
+      path: '/store',
+      name: 'Linsdström Store',
+      iconClasS: 'icon-store',
+    },
+  ];
 
   return (
     <div className="Footer">
@@ -37,11 +37,11 @@ const Footer = ({ location }) => {
               <div className={iconClasses} />
               {item.name}
             </Link>
-          )
+          );
         })}
       </div>
     </div>
   );
-}
+};
 
 export default Footer;

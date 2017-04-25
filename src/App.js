@@ -22,7 +22,7 @@ const Report = () => <ReportPage />;
 const Scan = () => <ScanPage />;
 const Store = () => <StorePage />;
 
-const App = (props) => (
+const App = props => (
   <Router history={hashHistory}>
     <div className="App">
       <Route path="*" component={Header} />

@@ -23,11 +23,33 @@
       justify-content: center;
       flex: 1;
       flex-direction: column;
-      color: $primary-background-color;
+      color: $incactive-color;
       text-decoration: none;
       font-size: $font-size-tiny;
       text-align: center;
       padding: $base-padding;
+
+      &.active {
+        color: $primary-background-color;
+
+        .Footer-nav-link-icon {
+          &.icon-my-week {
+            background: url('../img/red/myweek.svg') no-repeat center center;
+          }
+
+          &.icon-contact {
+            background: url('../img/red/communication.svg') no-repeat center center;
+          }
+
+          &.icon-inventory {
+            background: url('../img/red/multipleshirts.svg') no-repeat center center;
+          }
+
+          &.icon-store {
+            background: url('../img/red/store.svg') no-repeat center center;
+          }
+        }
+      }
 
 
       &:not(:first-child) {
@@ -45,19 +67,19 @@
         margin-bottom: $base-padding / 2;
 
         &.icon-my-week {
-          background: url('../img/red/myweek.svg') no-repeat center center;
+          background: url('../img/grey/myweek.svg') no-repeat center center;
         }
 
         &.icon-contact {
-          background: url('../img/red/communication.svg') no-repeat center center;
+          background: url('../img/grey/communication.svg') no-repeat center center;
         }
 
         &.icon-inventory {
-          background: url('../img/red/multipleshirts.svg') no-repeat center center;
+          background: url('../img/grey/multipleshirts.svg') no-repeat center center;
         }
 
         &.icon-store {
-          background: url('../img/red/store.svg') no-repeat center center;
+          background: url('../img/grey/store.svg') no-repeat center center;
         }
       }
     }
