@@ -7,24 +7,12 @@
 	font-size: $list-font-size;
 	display: flex;
 	flex-direction: column;
-<<<<<<< HEAD
+
 
 	.Inventory {
 		padding: $base-padding-vertical $base-padding-horizontal; 
 		
-=======
-	align-items: center;
 
-	.title {
-		font-size: 2em;
-	}
-
-	.Inventory {
-
-		width: 90%;
-		margin: 5vh 5vw;
-
->>>>>>> 7817304119bf153f5f8a46318c88864bdf4f693b
 		.GarmentList {
 				display: flex;
 	  		flex-direction: column;
@@ -35,12 +23,11 @@
 	  			//box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.2);
 	  			margin-bottom: $base-margin-vertical;
 	  			background-color: $secondary-background-color;
-<<<<<<< HEAD
 	  			padding: $base-padding-horizontal $base-padding-vertical;
 
-=======
+
 				@include box-shadow();
->>>>>>> 7817304119bf153f5f8a46318c88864bdf4f693b
+
 
 	  			.stationary-info {
 
@@ -121,34 +108,17 @@
 						
 
 	  				}
-<<<<<<< HEAD
+
 	  				.GarmentInstance:last-child {
 	  					margin-bottom: 0;
-=======
 
-	  				.buttons {
-	  					//border: 1px dotted blue;
-	  					//padding-top: 1vh;
-	  					//padding-bottom: 1vh;
-	  					display: flex;
-	  					flex-direction: row;
-	  					flex-wrap: wrap;
-	  					justify-content: flex-end;
-	  					a {
-	  						margin-left: 1vw;
-	  						border-radius: $base-border-radius/2;
-	  						background-color: $primary-button-color;
-	  						padding: 1vh 2vw;
-	  						color: white;
-	  						//text-decoration: none;
-	  						font-weight: 1rem;
-	  					}
->>>>>>> 7817304119bf153f5f8a46318c88864bdf4f693b
-	  				}
+
+	  			
 
 	  				
 	  			}
 	  		}
   		}
+  	}
 	}
 }
