@@ -8,9 +8,32 @@
 	display: flex;
 	flex-direction: column;
 
+	.QR-code-info {
+		margin: $base-margin-horizontal 2*$base-margin-vertical 0 2*$base-margin-vertical;
+		padding: $base-padding-horizontal 2*$base-padding-vertical;
+		display: flex;
+		flex-direction: row;
+		text-align: center;
+	  justify-content:  center;
+	  align-items: center;
+
+		background-color: $secondary-background-color;
+		@include box-shadow();
+
+		.image {
+			width: 55px;
+			height: 55px;
+			background-color: white;
+		}
+		.text {
+			flex: 2;
+			//padding: $base-padding
+		}
+	}
+
 
 	.Inventory {
-		padding: $base-padding-vertical $base-padding-horizontal; 
+		padding: $base-padding-horizontal 0; 
 		
 
 		.GarmentList {
@@ -24,9 +47,7 @@
 	  			margin-bottom: $base-margin-vertical;
 	  			background-color: $secondary-background-color;
 	  			padding: $base-padding-horizontal $base-padding-vertical;
-
-
-				@include box-shadow();
+					@include box-shadow();
 
 
 	  			.stationary-info {
