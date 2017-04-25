@@ -1,11 +1,15 @@
 {
-  "main.css": "static/css/main.1de191c0.css",
-  "main.css.map": "static/css/main.1de191c0.css.map",
-  "main.js": "static/js/main.a8b78aa0.js",
-  "main.js.map": "static/js/main.a8b78aa0.js.map",
+  "main.css": "static/css/main.e6c6465b.css",
+  "main.css.map": "static/css/main.e6c6465b.css.map",
+  "main.js": "static/js/main.3f3e5bae.js",
+  "main.js.map": "static/js/main.3f3e5bae.js.map",
   "static/media/communication.svg": "static/media/communication.6354e7a6.svg",
+  "static/media/jacket.svg": "static/media/jacket.c1c6ecf7.svg",
+  "static/media/laundry.svg": "static/media/laundry.85b7888a.svg",
   "static/media/lindstrom.svg": "static/media/lindstrom.dcab03a9.svg",
   "static/media/multipleshirts.svg": "static/media/multipleshirts.4ac60729.svg",
-  "static/media/myweek.svg": "static/media/myweek.5158a840.svg",
+  "static/media/myweek.svg": "static/media/myweek.9bdac7f1.svg",
+  "static/media/pants.svg": "static/media/pants.846aa341.svg",
+  "static/media/shirt.svg": "static/media/shirt.e6b1911b.svg",
   "static/media/store.svg": "static/media/store.9ec32a14.svg"
 }
