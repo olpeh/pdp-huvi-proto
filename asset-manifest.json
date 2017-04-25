@@ -1,6 +1,11 @@
 {
-  "main.css": "static/css/main.c2f70fd6.css",
-  "main.css.map": "static/css/main.c2f70fd6.css.map",
-  "main.js": "static/js/main.eed5f7ad.js",
-  "main.js.map": "static/js/main.eed5f7ad.js.map"
+  "main.css": "static/css/main.dd13c9df.css",
+  "main.css.map": "static/css/main.dd13c9df.css.map",
+  "main.js": "static/js/main.0fe4e682.js",
+  "main.js.map": "static/js/main.0fe4e682.js.map",
+  "static/media/communication.svg": "static/media/communication.78e6316d.svg",
+  "static/media/lindstrom.svg": "static/media/lindstrom.dcab03a9.svg",
+  "static/media/multipleshirts.svg": "static/media/multipleshirts.4ac60729.svg",
+  "static/media/myweek.svg": "static/media/myweek.60d4c5ae.svg",
+  "static/media/store.svg": "static/media/store.9ec32a14.svg"
 }
