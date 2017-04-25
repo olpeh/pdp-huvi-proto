@@ -1,7 +1,6 @@
 import React from 'react';
 import './ContactPage.scss';
 import { Link } from 'react-router-dom';
-import Footer from '../components/Footer';
 
 const ContactPage = () => (
   <div className="ContactPage">
@@ -16,7 +15,6 @@ const ContactPage = () => (
         Chat with Lindström customer service
       </Link>
     </div>
-    <Footer />
   </div>
 );
 
