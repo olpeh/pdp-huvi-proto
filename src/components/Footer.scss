@@ -29,6 +29,10 @@
       text-align: center;
       padding: $base-padding-vertical / 2 $base-padding-horizontal;
 
+      &:focus {
+        outline: none;
+      }
+
       &.active {
         color: $primary-background-color;
 
