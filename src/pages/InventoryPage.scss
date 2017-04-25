@@ -13,9 +13,10 @@
 		padding: $base-padding-horizontal 2*$base-padding-vertical;
 		display: flex;
 		flex-direction: row;
-		text-align: center;
+		//text-align: center;
 	  justify-content:  center;
 	  align-items: center;
+	  flex-shrink: 0;
 
 		background-color: $secondary-background-color;
 		@include box-shadow();
@@ -24,10 +25,12 @@
 			width: 55px;
 			height: 55px;
 			background-color: white;
+
+
 		}
 		.text {
-			flex: 2;
-			//padding: $base-padding
+			flex: 1;
+			padding-left: $base-padding
 		}
 	}
 
