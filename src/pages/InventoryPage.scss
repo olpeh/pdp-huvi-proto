@@ -3,12 +3,14 @@
 .InventoryPage {
 	width: 100%;
 	height: 100%;
-	font-size: 1rem;
+	font-size: 1em;
 	//padding-bottom: 1vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 
 	.title {		
-		font-size: 2rem;
-		padding: 0 5vh 0 5vh;
+		font-size: 2em;
 	}
 
 	.Inventory {
@@ -30,8 +32,8 @@
 	  			margin-top: 1vh;
 	  			margin-bottom: 1vh;
 	  			padding: 2vw;
-	  			box-shadow: 2px 2px 2px #888888;
-	  			background-color: #F8F8F8;
+	  			//box-shadow: 2px 2px 2px #888888;
+	  			background-color: $secondary-background-color;
 
 	  			.stationary-info {
 
@@ -87,7 +89,7 @@
 	  					a {
 	  						margin-left: 1vw;
 	  						border-radius: $base-border-radius/2;
-	  						background-color: #0B3F8D;
+	  						background-color: $primary-button-color;
 	  						padding: 1vh 2vw;
 	  						color: white;
 	  						//text-decoration: none;
