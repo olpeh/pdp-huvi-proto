@@ -7,4 +7,86 @@
   flex: 1;
   justify-content: space-around;
   margin: 0 $base-padding;
+  flex-direction: column;
+
+  .LaundryInfo-heading {
+    text-align: center;
+    font-size: $base-font-medium;
+    flex: 1;
+  }
+
+  .LaundryInfo-date-info {
+    flex: 1;
+  }
+
+  .LaundryInfo-week-calendar {
+    display: flex;
+    flex: 6;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: stretch;
+
+    .week-calendar-day {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      justify-content: center;
+      background: $secondary-background-color;
+
+      &:not(:first-child) {
+        margin-left: $base-padding-horizontal / 2;
+
+        .weekday-short {
+          margin-left: -$base-padding-horizontal / 2;
+        }
+      }
+
+      &:not(:last-child) {
+        margin-right: $base-padding-horizontal / 2;
+
+        .weekday-short {
+          margin-right: -$base-padding-horizontal / 2;
+        }
+      }
+
+      .weekday-data {
+        padding: $base-padding-horizontal $base-padding-vertical;
+        flex: 6;
+        align-items: stretch;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+
+        .weekday-data-icon {
+          text-align: right;
+          flex: 1;
+          margin: $base-padding-horizontal $base-padding-vertical;
+
+          &.jackets {
+            background: url('../img/white/jacket.svg') no-repeat left center;
+          }
+
+          &.pants {
+            background: url('../img/white/pants.svg') no-repeat left center;
+          }
+
+          &.shirts {
+            background: url('../img/white/shirt.svg') no-repeat left center;
+          }
+
+          &.laundry {
+            background: url('../img/white/laundry.svg') no-repeat left center;
+          }
+        }
+      }
+
+      .weekday-short {
+        flex: 1;
+        text-align: center;
+        padding-top: $base-padding;
+        border-top: solid $base-padding / 2 $primary-color;
+        font-weight: bold;
+      }
+    }
+  }
 }
