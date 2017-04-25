@@ -27,7 +27,7 @@
       text-decoration: none;
       font-size: $font-size-tiny;
       text-align: center;
-      padding: $base-padding;
+      padding: $base-padding-vertical / 2 $base-padding-horizontal;
 
       &.active {
         color: $primary-background-color;
@@ -49,15 +49,6 @@
             background: url('../img/red/store.svg') no-repeat center center;
           }
         }
-      }
-
-
-      &:not(:first-child) {
-        margin-left: $base-padding / 2;
-      }
-
-      &:not(:last-child) {
-        margin-right: $base-padding / 2;
       }
 
       .Footer-nav-link-icon {

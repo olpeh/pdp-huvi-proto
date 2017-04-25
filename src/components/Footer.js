@@ -21,7 +21,7 @@ const Footer = ({ location }) => {
     },
     {
       path: '/store',
-      name: 'Linsdström Store',
+      name: 'Store',
       iconClasS: 'icon-store',
     },
   ];
