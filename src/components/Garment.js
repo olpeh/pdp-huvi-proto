@@ -1,10 +1,12 @@
 import React from 'react';
+import GarmentInstance from './GarmentInstance';
 
 class Garment extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       expanded: false,
+      instances: this.props.instances
     };
   }
 
@@ -14,11 +16,11 @@ class Garment extends React.Component {
 
   render() {
     const expanded = this.state.expanded
-      ? 'expanding-info expanded'
-      : 'expanding-info';
+      ? 'garment-list expanded'
+      : 'garment-list';
     return (
-      <div className="Garment" onClick={() => this.expand()}>
-        <div className="stationary-info">
+      <div className="Garment">
+        <div className="stationary-info" onClick={() => this.expand()}>
 
           <div className="left">
             <img
@@ -30,28 +32,39 @@ class Garment extends React.Component {
 
           <div className="right">
             <div className="name">
-              <strong>{this.props.name} {this.props.model}</strong>
+              <strong>{this.props.name}</strong>
             </div>
-            <div className="size"><strong>Size:</strong> {this.props.size}</div>
+            <div className="size">
+            <strong>Model: </strong> {this.props.model}
+            </div>
 
             <div className="detailed-information">
-              <div className="customer-number">
-                <strong>Customer number:</strong>
-                {' '}
-                {this.props.information.customer_number}
-              </div>
-              <div className="id">
-                <strong>Garment ID:</strong> {this.props.information.id}
-              </div>
+              
             </div>
           </div>
         </div>
         <div className={expanded}>
-          <div className="description">{this.props.description}</div>
+          {/*<div className="description">{this.props.description}</div>
           <div className="buttons">
             <a>Return</a>
             <a>Report repair</a>
           </div>
+        </div>
+      */}
+        {this.state.instances.map((instance) => (
+            <GarmentInstance 
+              key={instance.id}
+              name={this.props.name}
+              model={this.props.model}
+              img={this.props.img}
+              id={instance.id}
+              customer_number={instance.customer_number}
+              size={instance.size}
+              user_name={instance.user_name}
+              location={instance.location}
+            />    
+          ))} 
+
         </div>
 
       </div>

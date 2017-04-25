@@ -5,18 +5,17 @@ class GarmentList extends React.Component {
   render() {
     return (
       <div className="GarmentList">
-        {this.props.garments.map(garment => (
+        {this.props.garments.map((garment, index)  => (
           <Garment
-            key={garment.information.id}
+            key={index}
             name={garment.name}
             model={garment.model}
-            size={garment.size}
             description={garment.description}
-            information={garment.information}
+            instances={garment.instances}
             img={garment.img}
           />
         ))}
-      </div>
+    </div>
     );
   }
 }
