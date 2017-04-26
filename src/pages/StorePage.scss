@@ -4,8 +4,7 @@
 .StorePage {
 	width:100%;
 	height: 100%;
-	font-size: 1em;
-	padding: 1vh 4vw;
+	padding: $base-padding-horizontal $base-padding-vertical;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -21,19 +20,21 @@
 			.Item {
 
 				//border: 1px solid blue;
-				margin: 0vh 2vw 2vh 2vw;
 
-				margin-top: 1vh;
-	  			margin-bottom: 1vh;
-	  			padding: 2vw;
-	  			//box-shadow: 2px 2px 2px #888888;
+					margin-top: $base-margin-horizontal;
+	  			margin-bottom: $base-margin-horizontal;
+	  			padding: $base-padding;
 	  			background-color: $secondary-background-color;
-				@include box-shadow();
+					@include box-shadow();
 
 	  			.stationary-info {
 
 	  				display: flex;
 	  				flex-direction: row;
+	  				align-items: center;
+  					//justify-content: space-around;
+  					text-align: center;
+	  				
 
 	  				.left {
 	  					//border: 1px dotted green;
@@ -41,6 +42,7 @@
 	  					height: 20vw;
 	  					width: 20vw;
 	  					overflow: hidden;
+	  					//align-self: flex-start;
 
 	  					img {
 	  						//border: 1px solid #888;
@@ -53,10 +55,6 @@
 	  				.right {
 	  					//border: 1px dotted blue;
 	  					flex: 1;
-	  					padding-left: 1vw;
-	  					display: flex;
-						flex-direction: column;
-						align-items: center;
 	  				}
 
 

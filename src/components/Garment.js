@@ -36,10 +36,8 @@ class Garment extends React.Component {
       if (!sizes.includes(this.state.instances[index].size)) {
         sizes.push(this.state.instances[index].size);
       }
-      
     }
-    let sizes_string = sizes.join(", ");
-
+    let sizes_string = sizes.join(', ');
 
     return (
       <div className="Garment">

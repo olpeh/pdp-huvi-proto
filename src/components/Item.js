@@ -26,9 +26,9 @@ class Item extends React.Component {
             </div>
 
             <div className="size">
-              <strong>Sizes:</strong>
+              <strong>Sizes: </strong>
               {this.props.sizes.map(function(size, index) {
-                return <span key={index}>{!!index && ','}{size}</span>;
+                return <span key={index}>{!!index && ', '}{size}</span>;
               })}
             </div>
 
