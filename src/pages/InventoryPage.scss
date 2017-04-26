@@ -5,11 +5,11 @@
 	width: 100%;
 	height: 100%;
 	font-size: $list-font-size;
-	display: flex;
-	flex-direction: column;
+	//display: flex;
+	//flex-direction: column;
 
 	.QR-code-info {
-		margin: $base-margin-horizontal 2*$base-margin-vertical 0 2*$base-margin-vertical;
+		margin: 2*$base-margin-horizontal 2*$base-margin-vertical $base-margin-horizontal 2*$base-margin-vertical;
 		padding: $base-padding-horizontal 2*$base-padding-vertical;
 		display: flex;
 		flex-direction: row;
@@ -40,45 +40,107 @@
 		
 
 		.GarmentList {
-				display: flex;
-	  		flex-direction: column;
-	  		justify-content: space-around;
-	  		flex-wrap: wrap;
+				//display: flex;
+	  		//flex-direction: column;
+	  		//justify-content: space-around;
+	  		//flex-wrap: wrap;
 
 	  		.Garment {
 	  			//box-shadow: 0px 6px 12px 0px rgba(0, 0, 0, 0.2);
-	  			margin-bottom: $base-margin-vertical;
-	  			background-color: $secondary-background-color;
-	  			padding: $base-padding-horizontal $base-padding-vertical;
-					@include box-shadow();
-
+	  			margin-bottom: 4*$base-margin-horizontal;
+	  			
+	  			
+					
 
 	  			.stationary-info {
-
+	  				padding: 1.5*$base-padding-horizontal 2*$base-padding-vertical 0 2*$base-padding-vertical;
+	  				background-color: $secondary-background-color;
+	  				@include box-shadow();
 	  				display: flex;
-	  				flex-direction: row;
-	  				text-align: center;
-	  				justify-content:  center;
+	  				flex-direction: column;
+
+	  				//justify-content: center;
 	  				align-items: center;
 
+	  				
+	  				.name {
+	  					align-self: flex-start;
+	  					margin-bottom: $base-padding-horizontal; 
+	  				}
 
-	  				.left {
+	  				.columns {
+	  					align-self: flex-start;
+	  					width: 100%;
+		  				display: flex;
+		  				flex-direction: row;
+		  				//text-align: center;
+		  				justify-content:  space-between;
+		  				//align-items: center;
 
-	  						border-radius: $base-border-radius * 0.5 $base-border-radius*3 $base-border-radius*0.5;
 
-	  					height: 20vw;
-	  					width: 20vw;
-	  					overflow: hidden;
+		  				.left {
+		  					//flex: 1;
+		  					.icon {
+		  						background-color: white;
+		  						width: 80px;
+		  						height: 80px;
+		  					}
 
-	  					img {
-	  						width: 100px;
+		  				}
+		  				.center {
+		  					//padding-left: $base-padding-vertical * 2;
+		  					//flex: 1;
+
+		  				}
+
+		  				.right {
+		  					//flex: 1;
+
+		  					.icon {
+		  						background-color: white;
+		  						width: 50px;
+		  						height: 50px;
+		  					}
+		  				}
+	  				}
+
+	  				.expand-toggle {
+	  					display: flex;
+	  					flex-direction: column;
+	  					//text-align: center;
+	  					align-items: center;
+	  					
+	  					.text {
+	  						font-size: 0.6em;
+	  						padding: $base-padding-horizontal*0.5 0;
+
 	  					}
 
+		  				.arrow-up {
+							  width: 0; 
+							  height: 0;
+							  margin-bottom: -5px;
+							  border-left: 25px solid transparent;
+							  border-right: 25px solid transparent;
+							  
+							  border-bottom: 10px solid $primary-color;
+							}
+
+							.arrow-down {
+								//position: absolute;
+							  width: 0; 
+							  height: 0;
+							  margin-bottom: -5px;
+							  border-left: 25px solid transparent;
+							  border-right: 25px solid transparent;
+							  
+							  border-top: 10px solid $primary-color;
+
+							}
+
 	  				}
-	  				.right {
-	  					flex: 1;
-	  					padding-left: $base-padding-vertical;
-	  				}
+	  				
+
 	  			}
 
 	  			.garment-list {
@@ -92,7 +154,8 @@
 	  				padding: 2*$base-padding-horizontal 0 $base-padding-horizontal 0;
 
 	  				.GarmentInstance {
-	  					background-color: $secondary-background-color * 0.85;
+	  					background-color: $secondary-background-color;
+	  					@include box-shadow;
 	  					margin-bottom: $base-margin-horizontal;
 	  					display: flex;
 	  					flex-direction: column;
