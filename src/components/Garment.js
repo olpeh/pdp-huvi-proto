@@ -56,10 +56,9 @@ class Garment extends React.Component {
           </div>
 
           <div className="expand-toggle" onClick={() => this.expand()}>
-
+            {this.state.expanded && <div className="arrow-up" />}
             <div className="text">{toggle_message} {garment_name_genitive}</div>
             {!this.state.expanded && <div className="arrow-down" />}
-            {this.state.expanded && <div className="arrow-up" />}
           </div>
 
         </div>
