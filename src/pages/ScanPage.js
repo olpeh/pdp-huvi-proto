@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import QrReader from 'react-qr-reader';
 import ReportForm from '../components/ReportForm';
+import './ScanPage.scss';
 
 class ScanPage extends Component {
   constructor(props) {
@@ -32,14 +33,17 @@ class ScanPage extends Component {
 
     if (this.state.result === 'No result') {
       return (
-        <div>
-          <QrReader
+        <div className="ScanPage">
+        <div className="title">Scan garment</div>
+          <div className="QrReader">
+          <QrReader 
             delay={this.state.delay}
             style={previewStyle}
             facingMode={this.state.facingMode}
             onError={this.handleError}
             onScan={this.handleScan}
           />
+          </div>
           <p>{this.state.result}</p>
         </div>
       );
