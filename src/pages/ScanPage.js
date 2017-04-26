@@ -34,15 +34,15 @@ class ScanPage extends Component {
     if (this.state.result === 'No result') {
       return (
         <div className="ScanPage">
-        <div className="title">Scan garment</div>
+          <div className="title">Scan garment</div>
           <div className="QrReader">
-          <QrReader 
-            delay={this.state.delay}
-            style={previewStyle}
-            facingMode={this.state.facingMode}
-            onError={this.handleError}
-            onScan={this.handleScan}
-          />
+            <QrReader
+              delay={this.state.delay}
+              style={previewStyle}
+              facingMode={this.state.facingMode}
+              onError={this.handleError}
+              onScan={this.handleScan}
+            />
           </div>
           <p>{this.state.result}</p>
         </div>
