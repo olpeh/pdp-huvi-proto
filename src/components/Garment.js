@@ -73,9 +73,9 @@ class Garment extends React.Component {
 
         <div className={expanded}>
 
-          {this.state.instances.map(instance => (
+          {this.state.instances.map((instance,index) => (
             <GarmentInstance
-              key={instance.id}
+              key={index}
               name={this.props.name}
               model={this.props.model}
               img={this.props.img}
