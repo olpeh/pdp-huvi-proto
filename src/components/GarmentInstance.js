@@ -17,10 +17,8 @@ class GarmentInstance extends React.Component {
             <div className="size">Size: {this.props.size}</div>
           </div>
 
-         
-
-          <div className="right" >
-          <div className="icon"> </div>
+          <div className="right">
+            <div className="icon"> </div>
           </div>
         </div>
       </div>
