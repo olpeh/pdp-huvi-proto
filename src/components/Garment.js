@@ -65,13 +65,7 @@ class Garment extends React.Component {
         </div>
 
         <div className={expanded}>
-          {/*<div className="description">{this.props.description}</div>
-          <div className="buttons">
-            <a>Return</a>
-            <a>Report repair</a>
-          </div>
-        </div>
-      */}
+
           {this.state.instances.map(instance => (
             <GarmentInstance
               key={instance.id}
