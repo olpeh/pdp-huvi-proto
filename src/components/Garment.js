@@ -19,14 +19,14 @@ class Garment extends React.Component {
       ? 'garment-list expanded'
       : 'garment-list';
 
-    let toggle_message = "Show all";
+    let toggle_message = 'Show all';
     if (this.state.expanded) {
-      toggle_message = "Minimize";
+      toggle_message = 'Minimize';
     }
 
     let garment_name_genitive = this.props.name;
-    if (garment_name_genitive.slice(-1) !== "s") {
-      garment_name_genitive += "s";
+    if (garment_name_genitive.slice(-1) !== 's') {
+      garment_name_genitive += 's';
     } else {
       garment_name_genitive += "'";
     }
@@ -36,38 +36,33 @@ class Garment extends React.Component {
         <div className="stationary-info">
           <div className="name">{this.props.name}</div>
 
-
           <div className="columns">
-                    
-          <div className="left">
-            <div className="icon" />
-          </div>
 
-          <div className="center">
-            <div className="size">Size</div>
-            <div className="amount">You have {this.state.instances.length}</div>
-          </div>
-
-          <div className="right">
-            <div className="icon">
+            <div className="left">
+              <div className="icon" />
             </div>
+
+            <div className="center">
+              <div className="size">Size</div>
+              <div className="amount">
+                You have {this.state.instances.length}
+              </div>
+            </div>
+
+            <div className="right">
+              <div className="icon" />
+            </div>
+
           </div>
 
+          <div className="expand-toggle" onClick={() => this.expand()}>
 
-        
-        </div>
-
-        <div className="expand-toggle" onClick={() => this.expand()}>
-        
-        
-        <div className="text">{toggle_message} {garment_name_genitive}</div>
-        {!this.state.expanded && <div className="arrow-down"></div> }
-        {this.state.expanded && <div className="arrow-up"></div> }
-        </div>
+            <div className="text">{toggle_message} {garment_name_genitive}</div>
+            {!this.state.expanded && <div className="arrow-down" />}
+            {this.state.expanded && <div className="arrow-up" />}
+          </div>
 
         </div>
-
-
 
         <div className={expanded}>
           {/*<div className="description">{this.props.description}</div>
