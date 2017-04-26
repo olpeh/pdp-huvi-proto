@@ -46,7 +46,7 @@
 			{ 
 					"id" : "IGLDEEM2IH",
 					"customer_number": "529282",
-					"size": "S",
+					"size": "M",
 					"user_name" : "Jack",
 					"location": "Laundry"
 				
@@ -74,6 +74,14 @@
 					"id" : "XAUE0XK10F",
 					"customer_number": "529282",
 					"size": "L",
+					"user_name" : "Jack",
+					"location": "Locker"
+				
+			},
+			{
+					"id" : "XAUE0XK10F",
+					"customer_number": "529282",
+					"size": "M",
 					"user_name" : "Jack",
 					"location": "Locker"
 				

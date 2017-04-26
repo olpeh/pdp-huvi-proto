@@ -18,7 +18,7 @@ class GarmentInstance extends React.Component {
           </div>
 
           <div className="right">
-            <div className="icon"> </div>
+            <div className="icon"></div>
           </div>
         </div>
       </div>

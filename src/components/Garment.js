@@ -31,6 +31,16 @@ class Garment extends React.Component {
       garment_name_genitive += "'";
     }
 
+    let sizes = [];
+    for (var index in this.state.instances) {
+      if (!sizes.includes(this.state.instances[index].size)) {
+        sizes.push(this.state.instances[index].size);
+      }
+      
+    }
+    let sizes_string = sizes.join(", ");
+
+
     return (
       <div className="Garment">
         <div className="stationary-info">
@@ -43,7 +53,7 @@ class Garment extends React.Component {
             </div>
 
             <div className="center">
-              <div className="size">Size</div>
+              <div className="size">Sizes: {sizes_string}</div>
               <div className="amount">
                 You have {this.state.instances.length}
               </div>
