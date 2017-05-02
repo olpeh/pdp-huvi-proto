@@ -8,7 +8,9 @@ class GarmentInstance extends React.Component {
         <div className="columns">
 
           <div className="left">
-            <div className="icon" />
+            <div className="icon">
+              <img src={require('../img/white/' + this.props.img.src)} alt="" />
+            </div>
           </div>
           <div className="center">
             <div className="name">Name: {this.props.name}</div>
@@ -18,7 +20,12 @@ class GarmentInstance extends React.Component {
           </div>
 
           <div className="right">
-            <div className="icon" />
+            <div className="icon">
+              <div className="image">
+                <img src={require('../img/red/communication.svg')} alt="" />
+              </div>
+              <div className="text">Report damage</div>
+            </div>
           </div>
         </div>
       </div>

@@ -64,10 +64,52 @@
 
 						.left {
 							.icon {
-								background-color: white;
-								width: 25vw;
-								height: 25vw;
+								position: relative;
+								top: 0;
+								left: 0;
+								.top {
+									position: relative;
+									top: 0;
+									left: 0;
+									background-color: $img-background-color;
+									@include box-shadow();
+									width: $img-base-size;
+									height: $img-base-size;
+									padding: $base-padding*2;
+									z-index: 2;
+									img {
+										max-width: 100%;
+										max-height: 100%;
+									}
+								}
+								.middle {
+									background-color: $img-background-color;
+									width: $img-base-size;
+									height: $img-base-size;
+									position: absolute;
+									@include box-shadow();
+
+									top: 5px;
+									left: 5px;
+									padding: 2*$base-padding;
+									z-index: 1;
+
+								}
+								.bottom {
+									background-color: $img-background-color;
+									width: $img-base-size;
+									height: $img-base-size;
+									@include box-shadow();
+
+									position: absolute;
+									padding: 2*$base-padding;
+									top: 10px;
+									left: 10px;
+
+								}
+								
 							}
+							
 
 						}
 						.center {
@@ -77,9 +119,22 @@
 						.right {
 							
 							.icon {
+								@include box-shadow();
 								background-color: white;
-								width: 15vw;
-								height: 15vw;
+								padding: $base-padding;
+								display: flex;
+								flex-direction: column;
+								justify-content: center;
+								.image  {
+									img {
+										max-widht: 100%;
+										max-height: 100%;
+									}
+								}
+								.text {
+									font-size: 0.75em;
+									color: $secondary-background-color;
+								}
 							}
 						}
 					}
@@ -154,9 +209,19 @@
 							.left {
 								
 								.icon {
-									width: 12vw;
-									height: 12vw;
-									background-color: $primary-color;
+									
+									background-color: $img-background-color;
+									@include box-shadow();
+									width: $img-base-size;
+									height: $img-base-size;
+									padding: $base-padding;
+									width: $img-base-size*0.75;
+									height: $img-base-size*0.75;
+
+									img {
+										max-width: 100%;
+										max-height: 100%;
+									}
 								}
 							}
 							.center {
@@ -181,10 +246,33 @@
 
 							.right {
 								.icon {
-									width: 13vw;
-									height: 13vw;
-									background-color: $primary-color;
+
+								@include box-shadow();
+								//width: $img-base-size;
+								//height: $img-base-size;
+								//max-widht: 70%;
+								//max-height: 70%;
+								background-color: white;
+								padding: $base-padding;
+								display: flex;
+								flex-direction: column;
+								justify-content: center;
+			
+								//align-items: center;
+								.image  {
+									//max-width: 90%;
+									//max-height: 90%;
+									
+									img {
+										max-width: 90%;
+										max-height: 90%;
+									}
 								}
+								.text {
+									font-size: 0.75em;
+									color: $secondary-background-color;
+								}
+							}
 
 							}
 							

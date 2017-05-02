@@ -47,7 +47,17 @@ class Garment extends React.Component {
           <div className="columns">
 
             <div className="left">
-              <div className="icon" />
+
+              <div className="icon">
+                <div className="top">
+                  <img
+                    src={require('../img/white/' + this.props.img.src)}
+                    alt=""
+                  />
+                </div>
+                <div className="middle" />
+                <div className="bottom" />
+              </div>
             </div>
 
             <div className="center">
@@ -58,7 +68,13 @@ class Garment extends React.Component {
             </div>
 
             <div className="right">
-              <div className="icon" />
+              <div className="icon">
+                <div className="image">
+                  <img src={require('../img/red/store.svg')} alt="" />
+                </div>
+
+                <div className="text">Request more</div>
+              </div>
             </div>
 
           </div>
