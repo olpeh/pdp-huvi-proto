@@ -1,0 +1,9 @@
+@import '../commons/variables';
+
+.ChatPage {
+    display: flex;
+    align-self: stretch;
+    width: 100%;
+    margin: 4 * $base-margin-vertical 4 * $base-padding-horizontal;
+    justify-content: center;
+}

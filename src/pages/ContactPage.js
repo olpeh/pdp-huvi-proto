@@ -5,11 +5,11 @@ import { Link } from 'react-router-dom';
 const ContactPage = () => (
   <div className="ContactPage">
     <div className="ContactPage-link-wrapper">
-      <Link className="ContactPage-link" to="chat">
+      <Link className="ContactPage-link" to="chat/lindstrom">
         Chat with Lindström
         <div className="ContactPage-icon chat-icon" />
       </Link>
-      <Link className="ContactPage-link" to="chat">
+      <Link className="ContactPage-link" to="chat/manager">
         Chat with Alepa manager
         <div className="ContactPage-icon chat-icon" />
       </Link>
