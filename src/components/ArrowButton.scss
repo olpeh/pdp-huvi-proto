@@ -1,0 +1,56 @@
+@import '../commons/variables';
+@import '../commons/mixins';
+
+.ArrowButton {
+	
+	.up {
+		@include box-shadow();
+		border-radius: 50%;
+		background-color: white;
+		color:$secondary-background-color;
+		height: 12vw;
+		width: 12vw;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		text-align: center;
+		.number {
+			font-weight: bold;
+			font-size: 1rem;
+		}
+		
+		&:after {
+			content:"\25b2";   
+	    font-weight: bold;
+
+	    font-size: 1rem; 
+	    //margin-top: -4vw;
+		}
+	}
+
+	.down {
+		@include box-shadow();
+		border-radius: 50%;
+		background-color: white;
+		color:$secondary-background-color;
+		height: 12vw;
+		width: 12vw;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		text-align: center;
+		
+		.number {
+			font-weight: bold;
+			font-size: 1rem;
+		}
+
+		&:after {
+			content:"\25bc";   
+	    font-weight: bold;
+	    font-size: 1rem; 
+	    //margin-top: -4vw;
+		}
+	}
+
+}

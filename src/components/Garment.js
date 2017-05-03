@@ -1,5 +1,6 @@
 import React from 'react';
 import GarmentInstance from './GarmentInstance';
+import ArrowButton from './ArrowButton';
 
 class Garment extends React.Component {
   constructor(props) {
@@ -8,6 +9,7 @@ class Garment extends React.Component {
       expanded: false,
       instances: this.props.instances,
     };
+    this.expand = this.expand.bind(this);
   }
 
   expand() {
@@ -79,11 +81,16 @@ class Garment extends React.Component {
 
           </div>
 
-          <div className="expand-toggle" onClick={() => this.expand()}>
-            {this.state.expanded && <div className="arrow-up" />}
-            <div className="text">{toggle_message} {garment_name_genitive}</div>
-            {!this.state.expanded && <div className="arrow-down" />}
-          </div>
+          {!this.state.expanded &&
+            <div className="showall">
+              <div className="text">Show all</div>
+              <ArrowButton
+                direction="down"
+                number={this.state.instances.length}
+                functionality={this.expand}
+                text={toggle_message + ' ' + garment_name_genitive}
+              />
+            </div>}
 
         </div>
 
@@ -104,6 +111,16 @@ class Garment extends React.Component {
           ))}
 
         </div>
+
+        {this.state.expanded &&
+          <div className="minimize">
+            <ArrowButton
+              direction="up"
+              functionality={this.expand}
+              text={toggle_message + ' ' + garment_name_genitive}
+            />
+            <div className="text">Minimize</div>
+          </div>}
 
       </div>
     );
