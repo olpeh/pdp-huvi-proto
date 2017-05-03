@@ -15,9 +15,9 @@
     justify-content: space-around;
     padding: $base-padding-vertical $base-padding-horizontal;
 
-    a {
-      margin:  $base-padding-vertical $base-padding-horizontal;
-      padding: 2 * $base-padding-vertical $base-padding-horizontal;
+    .ContactPage-link {
+      margin:  $base-padding-vertical 10 * $base-padding-horizontal;
+      padding: $base-padding-vertical $base-padding-horizontal;
       background-color: $secondary-background-color;
       color: #fff;
       text-decoration: none;
@@ -25,6 +25,22 @@
       font-weight: bold;
       text-align: center;
       @include box-shadow();
+      flex: 1;
+
+      .ContactPage-icon {
+        display: block;
+        height: 80%;
+        width: 100%;
+        margin-top: $base-padding-vertical;
+
+        &.call-icon {
+          background: url('../img/white/lindstrom_small.svg') no-repeat center center;
+        }
+
+        &.chat-icon {
+          background: url('../img/white/communication.svg') no-repeat center center;
+        }
+      }
     }
   }
 }
