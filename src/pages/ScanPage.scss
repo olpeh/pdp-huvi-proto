@@ -1,16 +1,13 @@
 @import '../commons/variables';
 
 .ScanPage {
-	
-	
-	
-	.title {
-		font-size: $base-font-size*3;
 
-	}
-	.QrReader {
-		border: 4px dotted white;
-		border-radius: $base-border-radius;
-	}
+  .title {
+    font-size: $base-font-size*3;
+  }
 
+  .QrReader {
+    border: 4px dotted white;
+    border-radius: $base-border-radius;
+  }
 }

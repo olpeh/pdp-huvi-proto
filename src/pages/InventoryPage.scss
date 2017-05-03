@@ -2,282 +2,282 @@
 @import '../commons/mixins';
 
 .InventoryPage {
-	width: 100%;
-	height: 100%;
-	font-size: $list-font-size;
-	padding: 0 $base-padding-vertical;
+  width: 100%;
+  height: 100%;
+  font-size: $list-font-size;
+  padding: 0 $base-padding-vertical;
 
-	.QR-code-info {
-		margin: 2*$base-margin-horizontal 2*$base-margin-vertical $base-margin-horizontal 2*$base-margin-vertical;
-		padding: $base-padding-horizontal 2*$base-padding-vertical;
-		display: flex;
-		flex-direction: row;
-		justify-content:  center;
-		align-items: center;
-		flex-shrink: 0;
+  .QR-code-info {
+    margin: 2*$base-margin-horizontal 2*$base-margin-vertical $base-margin-horizontal 2*$base-margin-vertical;
+    padding: $base-padding-horizontal 2*$base-padding-vertical;
+    display: flex;
+    flex-direction: row;
+    justify-content:  center;
+    align-items: center;
+    flex-shrink: 0;
 
-		background-color: $secondary-background-color;
-		@include box-shadow();
+    background-color: $secondary-background-color;
+    @include box-shadow();
 
-		.image {
-			width: 15vw;
-			height: 15vw;
-			background-color: white;
+    .image {
+      width: 15vw;
+      height: 15vw;
+      background: url('../img/qr.png') no-repeat center center;
+      background-size: contain;
+    }
+
+    .text {
+      flex: 1;
+      padding-left: $base-padding
+    }
+  }
+
+  .Inventory {
+    padding: $base-padding-horizontal 0;
+
+    .GarmentList {
+
+      .Garment {
+
+        margin-bottom: 4*$base-margin-horizontal;
+
+        .stationary-info {
+          padding: 1.5*$base-padding-horizontal 2*$base-padding-vertical 3*$base-padding-horizontal 2*$base-padding-vertical;
+          background-color: $secondary-background-color;
+          @include box-shadow();
+          display: flex;
+          flex-direction: column;
+
+          align-items: center;
 
 
-		}
-		.text {
-			flex: 1;
-			padding-left: $base-padding
-		}
-	}
+          .name {
+            align-self: flex-start;
+            margin-bottom: $base-padding-horizontal;
+          }
 
-	.Inventory {
-		padding: $base-padding-horizontal 0; 
-		
-		.GarmentList {
-
-			.Garment {
-
-				margin-bottom: 4*$base-margin-horizontal;
-
-				.stationary-info {
-					padding: 1.5*$base-padding-horizontal 2*$base-padding-vertical 3*$base-padding-horizontal 2*$base-padding-vertical;
-					background-color: $secondary-background-color;
-					@include box-shadow();
-					display: flex;
-					flex-direction: column;
-
-					align-items: center;
+          .columns {
+            align-self: flex-start;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content:  space-between;
 
 
-					.name {
-						align-self: flex-start;
-						margin-bottom: $base-padding-horizontal; 
-					}
+            .left {
+              .icon {
+                position: relative;
+                top: 0;
+                left: 0;
+                .top {
+                  position: relative;
+                  top: 0;
+                  left: 0;
+                  background-color: $img-background-color;
+                  @include box-shadow();
+                  width: $img-base-size;
+                  height: $img-base-size;
+                  padding: $base-padding*2;
+                  z-index: 2;
+                  img {
+                    max-width: 100%;
+                    max-height: 100%;
+                  }
+                }
+                .middle {
+                  background-color: $img-background-color;
+                  width: $img-base-size;
+                  height: $img-base-size;
+                  position: absolute;
+                  @include box-shadow();
 
-					.columns {
-						align-self: flex-start;
-						width: 100%;
-						display: flex;
-						flex-direction: row;
-						justify-content:  space-between;
-						
+                  top: 5px;
+                  left: 5px;
+                  padding: 2*$base-padding;
+                  z-index: 1;
 
-						.left {
-							.icon {
-								position: relative;
-								top: 0;
-								left: 0;
-								.top {
-									position: relative;
-									top: 0;
-									left: 0;
-									background-color: $img-background-color;
-									@include box-shadow();
-									width: $img-base-size;
-									height: $img-base-size;
-									padding: $base-padding*2;
-									z-index: 2;
-									img {
-										max-width: 100%;
-										max-height: 100%;
-									}
-								}
-								.middle {
-									background-color: $img-background-color;
-									width: $img-base-size;
-									height: $img-base-size;
-									position: absolute;
-									@include box-shadow();
+                }
+                .bottom {
+                  background-color: $img-background-color;
+                  width: $img-base-size;
+                  height: $img-base-size;
+                  @include box-shadow();
 
-									top: 5px;
-									left: 5px;
-									padding: 2*$base-padding;
-									z-index: 1;
+                  position: absolute;
+                  padding: 2*$base-padding;
+                  top: 10px;
+                  left: 10px;
 
-								}
-								.bottom {
-									background-color: $img-background-color;
-									width: $img-base-size;
-									height: $img-base-size;
-									@include box-shadow();
+                }
 
-									position: absolute;
-									padding: 2*$base-padding;
-									top: 10px;
-									left: 10px;
+              }
 
-								}
-								
-							}
-							
-						}
+            }
 
-						.right {
-							
-							.icon {
-								@include box-shadow();
-								background-color: white;
-								padding: $base-padding;
-								display: flex;
-								flex-direction: column;
-								justify-content: center;
-								.image  {
-									img {
-										max-widht: 100%;
-										max-height: 100%;
-									}
-								}
-								.text {
-									font-size: 0.75em;
-									color: $secondary-background-color;
-								}
-							}
-						}
-					}
+            .right {
 
-					.showall {
-						height: 0;
-						position: relative;
-						top: -2*$base-padding-horizontal;
-						//margin-bottom: -5vw;
-						display: flex;
-						flex-direction: column;
-						//justify-content: center;
-						align-items: center;
-						//text-align: center;
+              .icon {
+                @include box-shadow();
+                background-color: white;
+                padding: $base-padding;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                .image  {
+                  img {
+                    max-widht: 100%;
+                    max-height: 100%;
+                  }
+                }
+                .text {
+                  font-size: 0.75em;
+                  color: $secondary-background-color;
+                }
+              }
+            }
+          }
 
-						.text {
-							font-size: 0.75em;
-						}
-					}
-				}
+          .showall {
+            height: 0;
+            position: relative;
+            top: -2*$base-padding-horizontal;
+            //margin-bottom: -5vw;
+            display: flex;
+            flex-direction: column;
+            //justify-content: center;
+            align-items: center;
+            //text-align: center;
 
-				.garment-list {
+            .text {
+              font-size: 0.75em;
+            }
+          }
+        }
 
-					display: none;
+        .garment-list {
 
-					&.expanded {
-						display: block;
-					}
+          display: none;
 
-					padding: 2*$base-padding-horizontal 0 $base-padding-horizontal 0;
+          &.expanded {
+            display: block;
+          }
 
-					.GarmentInstance {
-						background-color: $secondary-background-color;
-						@include box-shadow;
-						margin-bottom: $base-margin-horizontal;
-						display: flex;
-						flex-direction: column;
-						align-content: center;
-						padding: $base-padding-horizontal $base-padding-vertical;
+          padding: 2*$base-padding-horizontal 0 $base-padding-horizontal 0;
 
-						.location {
-							font-size: 0.8em;
-							align-self: flex-end;
-							font-weight: bold;
-						}
-						.columns {
-							display: flex;
-							flex-direction: row;
-							justify-content: space-around;
-							padding-top: $base-padding-horizontal;
-							padding-bottom: $base-padding-horizontal;
+          .GarmentInstance {
+            background-color: $secondary-background-color;
+            @include box-shadow;
+            margin-bottom: $base-margin-horizontal;
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            padding: $base-padding-horizontal $base-padding-vertical;
 
-							.left {
-								
-								.icon {
-									
-									background-color: $img-background-color;
-									@include box-shadow();
-									width: $img-base-size;
-									height: $img-base-size;
-									padding: $base-padding;
-									width: $img-base-size*0.75;
-									height: $img-base-size*0.75;
+            .location {
+              font-size: 0.8em;
+              align-self: flex-end;
+              font-weight: bold;
+            }
+            .columns {
+              display: flex;
+              flex-direction: row;
+              justify-content: space-around;
+              padding-top: $base-padding-horizontal;
+              padding-bottom: $base-padding-horizontal;
 
-									img {
-										max-width: 100%;
-										max-height: 100%;
-									}
-								}
-							}
-							.center {
-								.name {
-									font-weight: bold;
-									font-size: 0.85em;
+              .left {
 
-								}
-								.model {
-									font-size: 0.8em;
-									
-								}
+                .icon {
 
-								.id {
-									font-size: 0.7em;
+                  background-color: $img-background-color;
+                  @include box-shadow();
+                  width: $img-base-size;
+                  height: $img-base-size;
+                  padding: $base-padding;
+                  width: $img-base-size*0.75;
+                  height: $img-base-size*0.75;
 
-								}
-								.size {
-									font-size: 0.7em;
-								}
-							}
+                  img {
+                    max-width: 100%;
+                    max-height: 100%;
+                  }
+                }
+              }
+              .center {
+                .name {
+                  font-weight: bold;
+                  font-size: 0.85em;
 
-							.right {
-								.icon {
+                }
+                .model {
+                  font-size: 0.8em;
 
-								@include box-shadow();
-								//width: $img-base-size;
-								//height: $img-base-size;
-								//max-widht: 70%;
-								//max-height: 70%;
-								background-color: white;
-								padding: $base-padding;
-								display: flex;
-								flex-direction: column;
-								justify-content: center;
-			
-								//align-items: center;
-								.image  {
-									//max-width: 90%;
-									//max-height: 90%;
-									
-									img {
-										max-width: 90%;
-										max-height: 90%;
-									}
-								}
-								.text {
-									font-size: 0.75em;
-									color: $secondary-background-color;
-								}
-							}
+                }
 
-							}
-							
-						}
-					}
+                .id {
+                  font-size: 0.7em;
 
-					.GarmentInstance:last-child {
-						margin-bottom: 0;
+                }
+                .size {
+                  font-size: 0.7em;
+                }
+              }
 
-					}
-				}
-				.minimize {
-						//margin-top: -8vw;
-						position: relative;
-						height: 0;
-						top: -4*$base-padding-horizontal;
-						display: flex;
-						flex-direction: column;
-						//justify-content: center;
-						align-items: center;
-						//text-align: center;
-						.text {
-							font-size: 0.75em;
-						}
-					}
-			}
-		}
-	}
+              .right {
+                .icon {
+
+                @include box-shadow();
+                //width: $img-base-size;
+                //height: $img-base-size;
+                //max-widht: 70%;
+                //max-height: 70%;
+                background-color: white;
+                padding: $base-padding;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+
+                //align-items: center;
+                .image  {
+                  //max-width: 90%;
+                  //max-height: 90%;
+
+                  img {
+                    max-width: 90%;
+                    max-height: 90%;
+                  }
+                }
+                .text {
+                  font-size: 0.75em;
+                  color: $secondary-background-color;
+                }
+              }
+
+              }
+
+            }
+          }
+
+          .GarmentInstance:last-child {
+            margin-bottom: 0;
+
+          }
+        }
+        .minimize {
+            //margin-top: -8vw;
+            position: relative;
+            height: 0;
+            top: -4*$base-padding-horizontal;
+            display: flex;
+            flex-direction: column;
+            //justify-content: center;
+            align-items: center;
+            //text-align: center;
+            .text {
+              font-size: 0.75em;
+            }
+          }
+      }
+    }
+  }
 }

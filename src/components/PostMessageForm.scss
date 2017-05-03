@@ -2,15 +2,15 @@
 @import '../commons/mixins';
 
 .PostMessageForm {
-    input {
-        font-size: $base-font-small;
-    }
+  input {
+    font-size: $base-font-small;
+  }
 
-    input[type="text"] {
-        width: 45vw;
-    }
+  input[type="text"] {
+    width: 45vw;
+  }
 
-    input[type="submit"] {
-        margin-left: $base-padding-horizontal;
-    }
+  input[type="submit"] {
+    margin-left: $base-padding-horizontal;
+  }
 }
