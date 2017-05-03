@@ -26,6 +26,8 @@ class ChatBox extends React.Component {
       owner: owner,
       text: text,
     };
+    const messageDiv = document.querySelector(".ChatBox-MessageList");
+    messageDiv.scrollTop = messageDiv.scrollHeight - 50;
     this.setState({ messages: [...this.state.messages, newMessage] });
   }
   clearMessages() {
