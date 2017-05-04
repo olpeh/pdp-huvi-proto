@@ -22,7 +22,8 @@
 		.image {
 			width: 15vw;
 			height: 15vw;
-			background-color: white;
+			background: url('../img/qr.png') no-repeat center center;
+ 			background-size: contain;
 
 
 		}
@@ -304,4 +305,5 @@
 			}
 		}
 	}
+
 }

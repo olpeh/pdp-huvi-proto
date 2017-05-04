@@ -1,40 +1,48 @@
 import React from 'react';
+import './ChatBox.scss';
 import MessageList from './MessageList';
 import PostMessageForm from './PostMessageForm';
-import ClearButton from './ClearButton';
 
 class ChatBox extends React.Component {
   constructor(props, context) {
     super(props, context);
     this.state = {
-      messages: [],
+      messages: [{
+      id: 0,
+      timestamp: new Date().getTime(),
+      owner: this.props.owner,
+      text: 'Hi! How can we help you?',
+    }],
     };
 
     this.appendChatMessage = this.appendChatMessage.bind(this);
     this.clearMessages = this.clearMessages.bind(this);
   }
-  appendChatMessage(owner, text) {
+  appendChatMessage(text) {
+    const owner = 'Me';
     let newMessage = {
       id: this.state.messages.length + 1,
       timestamp: new Date().getTime(),
       owner: owner,
       text: text,
     };
+    const messageDiv = document.querySelector(".ChatBox-MessageList");
+    messageDiv.scrollTop = messageDiv.scrollHeight - 50;
     this.setState({ messages: [...this.state.messages, newMessage] });
   }
   clearMessages() {
     this.setState({ messages: [] });
   }
   render() {
-    let isDisabled = this.state.messages.length === 0;
     return (
-      <div>
-        <MessageList messages={this.state.messages} />
-        <PostMessageForm appendChatMessage={this.appendChatMessage} />
-        <ClearButton
-          clearMessages={this.clearMessages}
-          isDisabled={isDisabled}
-        />
+      <div className="ChatBox">
+        <h1 className="ChatBox-heading">{this.props.title}</h1>
+        <div className="ChatBox-MessageList">
+          <MessageList messages={this.state.messages} />
+        </div>
+        <div className="ChatBox-PostMessageForm">
+          <PostMessageForm appendChatMessage={this.appendChatMessage} />
+        </div>
       </div>
     );
   }

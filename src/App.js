@@ -17,7 +17,7 @@ const Home = () => <FirstPage />;
 const Inventory = () => <InventoryPage />;
 const Laundry = () => <LaundryPage />;
 const Contact = () => <ContactPage />;
-const Chat = () => <ChatPage />;
+const Chat = ({ location }) => <ChatPage {...location} />;
 const Report = () => <ReportPage />;
 const Scan = () => <ScanPage />;
 const Store = () => <StorePage />;

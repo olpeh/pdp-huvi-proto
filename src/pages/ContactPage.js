@@ -5,15 +5,18 @@ import { Link } from 'react-router-dom';
 const ContactPage = () => (
   <div className="ContactPage">
     <div className="ContactPage-link-wrapper">
-      <a className="ContactPage-link" href="tel:12345678">
-        Call Lindström customer service
-      </a>
-      <a className="ContactPage-link" href="mailto:contact@lindstrom.fi">
-        Email Lindström customer service
-      </a>
-      <Link className="ContactPage-link" to="chat">
-        Chat with Lindström customer service
+      <Link className="ContactPage-link" to="chat/lindstrom">
+        Chat with Lindström
+        <div className="ContactPage-icon chat-icon" />
       </Link>
+      <Link className="ContactPage-link" to="chat/manager">
+        Chat with Alepa manager
+        <div className="ContactPage-icon chat-icon" />
+      </Link>
+      <a className="ContactPage-link" href="tel:12345678">
+        Call customer service
+        <div className="ContactPage-icon call-icon" />
+      </a>
     </div>
   </div>
 );
