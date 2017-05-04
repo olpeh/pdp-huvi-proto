@@ -1,6 +1,7 @@
 import React from 'react';
 import GarmentInstance from './GarmentInstance';
 import ArrowButton from './ArrowButton';
+import { Link } from 'react-router-dom';
 
 class Garment extends React.Component {
   constructor(props) {
@@ -70,15 +71,16 @@ class Garment extends React.Component {
             </div>
 
             <div className="right">
-              <div className="icon">
-                <div className="image">
-                  <img src={require('../img/red/store.svg')} alt="" />
-                </div>
 
-                <div className="text">Request more</div>
+              <div className="icon">
+
+                <Link to="/store">
+                  <img src={require('../img/red/store.svg')} alt="" />
+                  <div className="text">Request more</div>
+                </Link>
+
               </div>
             </div>
-
           </div>
 
           {!this.state.expanded &&
