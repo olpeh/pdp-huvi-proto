@@ -1,0 +1,103 @@
+[
+	{
+		"name": "Winter Jacket",
+		"model": "SRX350",
+		"description": "Chest pockets, pen pocket, horizontal/vertical pull-out ID pocket, zipped/mobile phone pocket, double hip pockets and an open inside pocket. Sleeves with adjustable elasticated cuffs. Straight, adjustable hem. Extended back hem. Chin guard. Front storm flap.",
+		"img" : {
+			"src" : "jacket.svg",
+			"alt" : "Image Here!"
+		},
+		"price": "45",
+		"sizes": ["S", "M", "L", "XL", "XXL"]
+	},
+	{
+		"name": "Heavy Duty Trousers",
+		"model": "DHS333",
+		"description": "Technician work trousers. Knee pockets in CORDURA®. Two reinforced free nail pockets, which can be placed inside the front pockets with bellows Two back pockets with bellows. Certified according to EN 14404 when used with EN14404 certified kneepads style: 4018, 4000, 4000",
+		"img" : {
+			"src" : "pants.svg",
+			"alt" : "Image here!"
+		},
+		"price": "50",
+		"sizes": ["S", "M", "L", "XL", "XXL"]	
+	},
+	{
+		"name": "Softshell Jacket",
+		"model": "TRW295",
+		"description": "Adjustable waist and cuffs. Front pockets with zippers",
+		"img" : {
+			"src" : "jacket.svg",
+			"alt" : "Image here!"
+		},
+		"price": "60",
+		"sizes": ["S", "M", "L", "XL", "XXL"]
+	},
+	{
+		"name": "Work Overalls",
+		"model": "WQW391",
+		"description": "Work overalls with embroided logos.",		
+		"img" : {
+			"src" : "pants.svg",
+			"alt" : "Image here!"
+		},
+		"price": "35",
+		"sizes": ["S", "M", "L", "XL", "XXL"]
+	},
+	{
+		"name": "Light trousers",
+		"model": "QVF291",
+		"description": "Light trousers for indoor usage.",		
+		"img" : {
+			"src" : "pants.svg",
+			"alt" : "Image here!"
+		},
+		"price": "15",
+		"sizes": ["S", "M", "L", "XL", "XXL"]
+	},
+	{
+		"name": "Basic T-Shirt",
+		"model": "AST195",
+		"description": "Basic T-shirt with logos and ",		
+		"img" : {
+			"src" : "shirt.svg",
+			"alt" : "Image here!"
+		},
+		"price": "10",
+		"sizes": ["S", "M", "L", "XL", "XXL"]
+	},
+	{
+		"name": "Heavy Sweatshirt",
+		"model": "BGS740",
+		"description": "Heavy duty sweatshirt for indoor and outdoor usage. Lining is soft and warm polyester",		
+		"img" : {
+			"src" : "jacket.svg",
+			"alt" : "Image here!"
+		},
+		"price": "30",
+		"sizes": ["S", "M", "L", "XL", "XXL"]
+	},
+	{
+		"name": "Nylon gloves",
+		"model": "TRK491",
+		"description": "Nylon gloves with nitrile grip. Tight fit that provides precision. Suitable for outdoors and indoors",		
+		"img" : {
+			"src" : "shirt.svg",
+			"alt" : "Image here!"
+		},
+		"price": "5",
+		"sizes": ["S", "M", "L", "XL", "XXL"]
+	},
+	{
+		"name": "Safety shoes",
+		"model": "GRE234",
+		"description": "Safety shoes with steel toe-tip. Can withstand weights up to 1000kg.",		
+		"img" : {
+			"src" : "jacket.svg",
+			"alt" : "Image here!"
+		},
+		"price": "85",
+		"sizes": ["S", "M", "L", "XL", "XXL"]
+	}
+
+
+]

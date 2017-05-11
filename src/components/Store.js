@@ -1,5 +1,5 @@
 import React from 'react';
-import StoreData from '../static/data/store_data.json';
+import StoreData from '../static/data/store_data_new.json';
 import ItemList from './ItemList';
 
 class Store extends React.Component {
