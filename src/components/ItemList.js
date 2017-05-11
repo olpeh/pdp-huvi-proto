@@ -5,9 +5,9 @@ class ItemList extends React.Component {
   render() {
     return (
       <div className="ItemList">
-        {this.props.items.map(item => (
+        {this.props.items.map((item, index) => (
           <Item
-            key={item.key}
+            key={index}
             name={item.name}
             model={item.model}
             sizes={item.sizes}
