@@ -73,7 +73,7 @@
   .LaundryInfo-details-wrapper {
     display: flex;
     flex: 10;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     align-content: stretch;
     margin: $base-padding-vertical 0;
@@ -81,22 +81,25 @@
     .LaundryInfo-details {
       background: $secondary-background-color;
       padding: $base-padding-vertical $base-padding-horizontal;
-      flex: 3;
+      flex: 1;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       align-content: stretch;
       @include box-shadow();
+      width: 60vw;
 
       .LaundryInfo-details-heading {
         flex: 1;
       }
 
       .weekday-data {
-        flex: 9;
+        flex: 1;
+        flex-direction: row;
 
         .weekday-data-wrapper {
-          justify-content: flex-start;
+          align-items: stretch;
+          flex-direction: row;
 
           .weekday-data-icon {
             background-position: left;
@@ -106,13 +109,15 @@
           .weekday-data-text {
             flex: 1;
           }
-
-          .weekday-data-details {
-            flex: 6;
-          }
-
         }
       }
+    }
+
+    .LaundryInfo-notification {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .LaundryInfo-week-number {
@@ -137,14 +142,6 @@
       align-items: center;
       align-content: stretch;
       margin: $base-padding-vertical / 2 $base-padding-horizontal;
-
-      &:first-child {
-        margin-top: $base-padding-vertical;
-      }
-
-      &:last-child {
-        margin-bottom: $base-padding-vertical;
-      }
 
       .weekday-data-text {
         align-self: center;

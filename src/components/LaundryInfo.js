@@ -12,7 +12,11 @@ function renderWeekdayShort(weekDay) {
   );
 }
 
-function renderWeekdayDataContents(weekDay, withDetails = false) {
+function renderWeekdayDataContents(
+  weekDay,
+  withDetails = false,
+  hideLaundry = false
+) {
   return (
     <div className="weekday-data">
       <div className="weekday-data-wrapper">
@@ -42,7 +46,7 @@ function renderWeekdayDataContents(weekDay, withDetails = false) {
           {withDetails ? weekDay.data.shirts.details : null}
         </div>
       </div>
-      {withDetails
+      {hideLaundry
         ? null
         : <div className="weekday-data-wrapper">
             <div className="weekday-data-icon laundry" />
@@ -110,6 +114,27 @@ const LaundryInfo = () => {
       ],
     },
   ];
+
+  const remainingGarments = {
+    weekDay: weekdayNow + 1,
+    day: weekdays[weekdayNow % 5],
+    dayShort: weekdaysShort[weekdayNow % 5],
+    data: {
+      jackets: {
+        amount: 1,
+        details: 'Alepa Softshell Jacket',
+      },
+      pants: {
+        amount: 1,
+        details: 'Alepa Trousers',
+      },
+      shirts: {
+        amount: 1,
+        details: 'Alepa T-Shirt',
+      },
+    },
+  };
+
   return (
     <div className="LaundryInfo">
       <div className="LaundryInfo-heading">
@@ -134,10 +159,14 @@ const LaundryInfo = () => {
           <div className="LaundryInfo-details-heading">
             Clean clothes remaining:
           </div>
-          {renderWeekdayDataContents(weekData[0].weekDayData[1], true)}
+          {renderWeekdayDataContents(remainingGarments, false, true)}
         </div>
-        <div className="LaundryInfo-week-number">
-          Week {moment().format('W')}
+        <div className="LaundryInfo-notification">
+          <div>
+            Remember to drop your dirty garments to the laundry bin
+            {' '}
+            <b>today!</b>
+          </div>
         </div>
       </div>
     </div>
