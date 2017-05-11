@@ -2,7 +2,7 @@ import React from 'react';
 import moment from 'moment';
 import './LaundryInfo.scss';
 
-function renderWeekDayShort(weekDay) {
+function renderWeekdayShort(weekDay) {
   return (
     <div className="weekday-short">
       {weekDay.weekDay === moment().isoWeekday()
@@ -12,7 +12,7 @@ function renderWeekDayShort(weekDay) {
   );
 }
 
-function renderWeekDayDataContents(weekDay, withDetails = false) {
+function renderWeekdayDataContents(weekDay, withDetails = false) {
   return (
     <div className="weekday-data">
       <div className="weekday-data-wrapper">
@@ -51,37 +51,43 @@ function renderWeekDayDataContents(weekDay, withDetails = false) {
   );
 }
 
-function renderWeekDayData(weekDay) {
+function renderWeekdayData(weekDay) {
   if (!weekDay.data) {
     return <div className="weekday-data" />;
   }
 
-  return renderWeekDayDataContents(weekDay);
+  return renderWeekdayDataContents(weekDay);
 }
 
 const LaundryInfo = () => {
+  const weekdayNow = moment().isoWeekday();
+  const weekdays = [
+    'Monday',
+    'Tuesday',
+    'Wednesday',
+    'Thursday',
+    'Friday',
+  ];
+  const weekdaysShort = [
+    'Mon',
+    'Tue',
+    'Wed',
+    'Thu',
+    'Fri',
+  ];
+
   const weekData = [
     {
       weekDayData: [
         {
-          weekDay: 1,
-          day: 'Monday',
-          dayShort: 'Mon',
+          weekDay: weekdayNow,
+          day: weekdays[(weekdayNow - 1) % 5],
+          dayShort: weekdaysShort[(weekdayNow - 1) % 5],
         },
         {
-          weekDay: 2,
-          day: 'Tuesday',
-          dayShort: 'Tue',
-        },
-        {
-          weekDay: 3,
-          day: 'Wednesday',
-          dayShort: 'Wed',
-        },
-        {
-          weekDay: 4,
-          day: 'Thursday',
-          dayShort: 'Thu',
+          weekDay: weekdayNow + 1,
+          day: weekdays[weekdayNow % 5],
+          dayShort: weekdaysShort[weekdayNow % 5],
           data: {
             jackets: {
               amount: 1,
@@ -89,19 +95,29 @@ const LaundryInfo = () => {
             },
             pants: {
               amount: 2,
-              details: 'Alepa T-Shirt',
+              details: 'Alepa Trousers',
             },
             shirts: {
               amount: 3,
-              details: 'Alepa Trousers',
+              details: 'Alepa T-Shirt',
             },
             laundryDay: true,
           },
         },
         {
-          weekDay: 5,
-          day: 'Friday',
-          dayShort: 'Fri',
+          weekDay: weekdayNow  + 2,
+          day: weekdays[(weekdayNow + 1) % 5],
+          dayShort: weekdaysShort[(weekdayNow + 1) % 5],
+        },
+        {
+          weekDay: weekdayNow  + 3,
+          day: weekdays[(weekdayNow + 2) % 5],
+          dayShort: weekdaysShort[(weekdayNow + 2) % 5],
+        },
+        {
+          weekDay: weekdayNow + 4,
+          day: weekdays[(weekdayNow + 3) % 5],
+          dayShort: weekdaysShort[(weekdayNow + 3) % 5],
         },
       ],
     },
@@ -109,25 +125,29 @@ const LaundryInfo = () => {
   return (
     <div className="LaundryInfo">
       <div className="LaundryInfo-heading">
-        New clean workwear will arrive on <b>Thursday</b>. Have a nice week!
+        New clean workwear will arrive <b>tomorrow</b>. Have a nice workday!
       </div>
       <div className="LaundryInfo-date-info">
         {moment().format('DD.MM.YYYY')}
       </div>
       <div className="LaundryInfo-week-calendar">
-        {weekData[0].weekDayData.map(weekDay => (
-          <div className="week-calendar-day" key={weekDay.day}>
-            {renderWeekDayData(weekDay)}
-            {renderWeekDayShort(weekDay)}
-          </div>
-        ))}
+        {weekData[0].weekDayData.map(weekDay => {
+          const classes = `week-calendar-day ${weekDay.day}`;
+          return (
+              <div className={classes} key={weekDay.day}>
+                {renderWeekdayData(weekDay)}
+                {renderWeekdayShort(weekDay)}
+              </div>
+            );
+          })
+        }
       </div>
       <div className="LaundryInfo-details-wrapper">
         <div className="LaundryInfo-details">
           <div className="LaundryInfo-details-heading">
-            Clothes remaining until laundry day:
+            Clean clothes remaining:
           </div>
-          {renderWeekDayDataContents(weekData[0].weekDayData[3], true)}
+          {renderWeekdayDataContents(weekData[0].weekDayData[1], true)}
         </div>
         <div className="LaundryInfo-week-number">
           Week {moment().format('W')}
