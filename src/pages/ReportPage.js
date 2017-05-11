@@ -34,30 +34,33 @@ class ReportPage extends React.Component {
     console.log(this.state.garment);
     return (
       <div className="ReportPage">
-      <div className="back">
-        <Link to="/inventory">Go Back</Link>
-			</div>
-			<div className="report-garment">
-        <div className="garment-info">
-	        <div className="columns">
-	        	<div className="left">
-	        		<div className="icon">
-	        			<img src={require('../img/white/' + this.state.garment.img.src)} alt=""/>
-	        		</div>	
-	        	</div>
-	        	<div className="right">	
-		        	<div className="name">Name: {this.state.garment.name}</div>
-		        	<div className="model">Model: {this.state.garment.model}</div>
-		        	<div className="id">ID: {this.state.garment.id}</div>
-		        	<div className="size">Size: {this.state.garment.size}</div>
+        <div className="back">
+          <Link to="/inventory">Go Back</Link>
+        </div>
+        <div className="report-garment">
+          <div className="garment-info">
+            <div className="columns">
+              <div className="left">
+                <div className="icon">
+                  <img
+                    src={require('../img/white/' + this.state.garment.img.src)}
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div className="right">
+                <div className="name">Name: {this.state.garment.name}</div>
+                <div className="model">Model: {this.state.garment.model}</div>
+                <div className="id">ID: {this.state.garment.id}</div>
+                <div className="size">Size: {this.state.garment.size}</div>
 
-	        	</div>
-	        </div>
-        </div>
-        <div className="title">1/3 Take picture of the damage</div>
-        <div className="picture-container">
-        <div className="picture"/>
-        </div>
+              </div>
+            </div>
+          </div>
+          <div className="title">1/3 Take picture of the damage</div>
+          <div className="picture-container">
+            <div className="picture" />
+          </div>
         </div>
       </div>
     );

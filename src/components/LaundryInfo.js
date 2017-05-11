@@ -61,20 +61,8 @@ function renderWeekdayData(weekDay) {
 
 const LaundryInfo = () => {
   const weekdayNow = moment().isoWeekday();
-  const weekdays = [
-    'Monday',
-    'Tuesday',
-    'Wednesday',
-    'Thursday',
-    'Friday',
-  ];
-  const weekdaysShort = [
-    'Mon',
-    'Tue',
-    'Wed',
-    'Thu',
-    'Fri',
-  ];
+  const weekdays = ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday'];
+  const weekdaysShort = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'];
 
   const weekData = [
     {
@@ -105,12 +93,12 @@ const LaundryInfo = () => {
           },
         },
         {
-          weekDay: weekdayNow  + 2,
+          weekDay: weekdayNow + 2,
           day: weekdays[(weekdayNow + 1) % 5],
           dayShort: weekdaysShort[(weekdayNow + 1) % 5],
         },
         {
-          weekDay: weekdayNow  + 3,
+          weekDay: weekdayNow + 3,
           day: weekdays[(weekdayNow + 2) % 5],
           dayShort: weekdaysShort[(weekdayNow + 2) % 5],
         },
@@ -134,13 +122,12 @@ const LaundryInfo = () => {
         {weekData[0].weekDayData.map(weekDay => {
           const classes = `week-calendar-day ${weekDay.day}`;
           return (
-              <div className={classes} key={weekDay.day}>
-                {renderWeekdayData(weekDay)}
-                {renderWeekdayShort(weekDay)}
-              </div>
-            );
-          })
-        }
+            <div className={classes} key={weekDay.day}>
+              {renderWeekdayData(weekDay)}
+              {renderWeekdayShort(weekDay)}
+            </div>
+          );
+        })}
       </div>
       <div className="LaundryInfo-details-wrapper">
         <div className="LaundryInfo-details">
