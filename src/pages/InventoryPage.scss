@@ -249,35 +249,34 @@
 							}
 
 							.right {
-								.icon {
+									.icon {
 
-								@include box-shadow();
-								//width: $img-base-size;
-								//height: $img-base-size;
-								//max-widht: 70%;
-								//max-height: 70%;
-								background-color: white;
-								padding: $base-padding;
-								display: flex;
-								flex-direction: column;
-								justify-content: center;
-			
-								//align-items: center;
-								.image  {
-									//max-width: 90%;
-									//max-height: 90%;
-									
-									img {
-										max-width: 90%;
-										max-height: 90%;
+									@include box-shadow();
+									//width: $img-base-size;
+									//height: $img-base-size;
+									//max-widht: 70%;
+									//max-height: 70%;
+									background-color: white;
+									padding: $base-padding;
+									display: flex;
+									flex-direction: column;
+									justify-content: center;
+				
+									//align-items: center;
+									.image  {
+										//max-width: 90%;
+										//max-height: 90%;
+										
+										img {
+											max-width: 90%;
+											max-height: 90%;
+										}
+									}
+									.text {
+										font-size: 0.75em;
+										color: $secondary-background-color;
 									}
 								}
-								.text {
-									font-size: 0.75em;
-									color: $secondary-background-color;
-								}
-							}
-
 							}
 							
 						}

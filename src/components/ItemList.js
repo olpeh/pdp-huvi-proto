@@ -10,10 +10,10 @@ class ItemList extends React.Component {
             key={index}
             name={item.name}
             model={item.model}
-            sizes={item.sizes}
             description={item.description}
-            material={item.material}
             img={item.img}
+            price={item.price}
+            sizes={item.sizes}
           />
         ))}
       </div>

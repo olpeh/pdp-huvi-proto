@@ -1,37 +1,38 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class Item extends React.Component {
   render() {
     return (
       <div className="Item">
 
-        <div className="stationary-info">
+        <div className="columns">
 
-          <div className="left">
-            <img
-              className="image"
-              src={this.props.img.src}
-              alt={this.props.img.alt}
-            />
+           <div className="left">
+            <div className="icon">
+              <img src={require('../img/white/' + this.props.img.src)} alt="" />
+            </div>
           </div>
 
-          <div className="right">
-
-            <div className="name">
-              <strong>{this.props.name}</strong>
-            </div>
-
-            <div className="model">
-              <strong>Model: </strong><strong>{this.props.model}</strong>
-            </div>
-
-            <div className="size">
-              <strong>Sizes: </strong>
+          <div className="center">
+            <div className="name">Name: {this.props.name}</div>
+            <div className="model">Model:{this.props.model}</div>
+            <div className="price">Price: {this.props.price}€</div>
+            <div className="description">{this.props.description}</div>
+            <div className="size">Sizes: 
               {this.props.sizes.map(function(size, index) {
                 return <span key={index}>{!!index && ', '}{size}</span>;
               })}
             </div>
 
+          </div>
+          <div className="right">
+            <div className="icon">
+              <Link to="/store">              
+                <img src={require('../img/red/store.svg')} alt="" />
+                <div className="text">Request more</div>
+              </Link>
+            </div>
           </div>
         </div>
 
