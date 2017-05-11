@@ -11,7 +11,6 @@
   flex-direction: column;
 
   .LaundryInfo-heading {
-    font-size: $base-font-medium;
     flex: 1;
     text-align: center;
     padding: $base-padding-vertical $base-padding-horizontal;
@@ -40,24 +39,19 @@
 
       &:not(:first-child) {
         margin-left: $base-padding-horizontal / 2;
-
-        .weekday-short {
-          margin-left: -$base-padding-horizontal / 2;
-        }
       }
 
       &:not(:last-child) {
         margin-right: $base-padding-horizontal / 2;
-
-        .weekday-short {
-          margin-right: -$base-padding-horizontal / 2;
+        
+        &.Friday {
+          margin-right: 2 * $base-padding-horizontal;
         }
       }
 
       .weekday-short {
         flex: 1;
         text-align: center;
-        border-top: solid $base-padding-vertical / 4 $primary-color;
         font-weight: bold;
         display: flex;
         align-items: center;
@@ -66,13 +60,11 @@
         .current {
           background: $primary-color;
           color: $secondary-background-color;
-          width: 100%;
           height: 100%;
+          width: 100%;
           display: flex;
           align-items: center;
           justify-content: center;
-          margin-left: $base-padding-horizontal / 2;
-          margin-right: $base-padding-horizontal / 2;
         }
       }
     }
@@ -113,7 +105,6 @@
 
           .weekday-data-text {
             flex: 1;
-            font-size: $font-size-tiny;
           }
 
           .weekday-data-details {

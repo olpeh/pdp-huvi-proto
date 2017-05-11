@@ -3,7 +3,6 @@
 .InventoryPage {
 	width: 100%;
 	height: 100%;
-	font-size: $list-font-size;
 	padding: 0 $base-padding-vertical;
 	.QR-code-info {
 		margin: 2*$base-margin-horizontal 2*$base-margin-vertical $base-margin-horizontal 2*$base-margin-vertical;
@@ -107,7 +106,6 @@
 								a {
 									text-decoration: none;
 									.text {
-										font-size: 0.75em;
 										color: $secondary-background-color;
 									}
 								}
@@ -122,9 +120,6 @@
 						display: flex;
 						flex-direction: column;
 						align-items: center;
-						.text {
-							font-size: 0.75em;
-						}
 					}
 				}
 				.garment-list {
@@ -142,7 +137,6 @@
 						align-content: center;
 						padding: $base-padding-horizontal $base-padding-vertical;
 						.location {
-							font-size: 0.8em;
 							align-self: flex-end;
 							font-weight: bold;
 						}
@@ -172,17 +166,6 @@
 							.center {
 								.name {
 									font-weight: bold;
-									font-size: 0.85em;
-								}
-								.model {
-									font-size: 0.8em;
-
-								}
-								.id {
-									font-size: 0.7em;
-								}
-								.size {
-									font-size: 0.7em;
 								}
 							}
 							.right {
@@ -203,7 +186,6 @@
 										}
 									}
 									.text {
-										font-size: 0.75em;
 										color: $secondary-background-color;
 									}
 								}
@@ -221,9 +203,6 @@
 					display: flex;
 					flex-direction: column;
 					align-items: center;
-					.text {
-						font-size: 0.75em;
-					}
 				}
 			}
 		}

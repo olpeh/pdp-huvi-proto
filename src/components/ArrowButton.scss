@@ -16,15 +16,11 @@
     text-align: center;
     .number {
       font-weight: bold;
-      font-size: 1rem;
     }
 
     &:after {
       content:"\25b2";
       font-weight: bold;
-
-      font-size: 1rem;
-      //margin-top: -4vw;
     }
   }
 
@@ -42,14 +38,11 @@
 
     .number {
       font-weight: bold;
-      font-size: 1rem;
     }
 
     &:after {
       content:"\25bc";
       font-weight: bold;
-      font-size: 1rem;
-      //margin-top: -4vw;
     }
   }
 

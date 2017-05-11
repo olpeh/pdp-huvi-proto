@@ -9,7 +9,8 @@
   justify-content: center;
   background: $primary-color;
   color: $primary-background-color;
-  min-height: 50px;
+  min-height: 60px;
+  font-size: smaller;
 
   .Footer-nav {
     display: flex;
@@ -26,7 +27,6 @@
       flex-direction: column;
       color: $incactive-color;
       text-decoration: none;
-      font-size: $font-size-tiny;
       text-align: center;
       padding: $base-padding-vertical / 2 $base-padding-horizontal;
       padding-top: 1.5vh;

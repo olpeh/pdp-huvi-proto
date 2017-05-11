@@ -2,10 +2,6 @@
 @import '../commons/mixins';
 
 .PostMessageForm {
-  input {
-    font-size: $base-font-small;
-  }
-
   input[type="text"] {
     width: 45vw;
   }

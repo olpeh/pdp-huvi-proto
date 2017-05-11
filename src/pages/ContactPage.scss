@@ -21,7 +21,6 @@
       background-color: $secondary-background-color;
       color: #fff;
       text-decoration: none;
-      font-size: $base-font-size;
       font-weight: bold;
       text-align: center;
       @include box-shadow();
@@ -39,6 +38,10 @@
 
         &.chat-icon {
           background: url('../img/white/communication.svg') no-repeat center center;
+        }
+
+        &.chat-icon-alepa {
+          background: url('../img/white/alepa.svg') no-repeat center center;
         }
       }
     }
