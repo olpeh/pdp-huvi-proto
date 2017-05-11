@@ -7,12 +7,14 @@ class ChatBox extends React.Component {
   constructor(props, context) {
     super(props, context);
     this.state = {
-      messages: [{
-      id: 0,
-      timestamp: new Date().getTime(),
-      owner: this.props.owner,
-      text: 'Hi! How can we help you?',
-    }],
+      messages: [
+        {
+          id: 0,
+          timestamp: new Date().getTime(),
+          owner: this.props.owner,
+          text: 'Hi! How can we help you?',
+        },
+      ],
     };
 
     this.appendChatMessage = this.appendChatMessage.bind(this);
@@ -26,7 +28,7 @@ class ChatBox extends React.Component {
       owner: owner,
       text: text,
     };
-    const messageDiv = document.querySelector(".ChatBox-MessageList");
+    const messageDiv = document.querySelector('.ChatBox-MessageList');
     messageDiv.scrollTop = messageDiv.scrollHeight - 50;
     this.setState({ messages: [...this.state.messages, newMessage] });
   }

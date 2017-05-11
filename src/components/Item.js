@@ -8,7 +8,7 @@ class Item extends React.Component {
 
         <div className="columns">
 
-           <div className="left">
+          <div className="left">
             <div className="icon">
               <img src={require('../img/white/' + this.props.img.src)} alt="" />
             </div>
@@ -19,7 +19,8 @@ class Item extends React.Component {
             <div className="model">Model:{this.props.model}</div>
             <div className="price">Price: {this.props.price}€</div>
             <div className="description">{this.props.description}</div>
-            <div className="sizes">Sizes: 
+            <div className="sizes">
+              Sizes:
               {this.props.sizes.map(function(size, index) {
                 return <span key={index}>{!!index && ', '}{size}</span>;
               })}
@@ -28,7 +29,7 @@ class Item extends React.Component {
           </div>
           <div className="right">
             <div className="icon">
-              <Link to="/store">              
+              <Link to="/store">
                 <img src={require('../img/red/store.svg')} alt="" />
                 <div className="text">Request</div>
               </Link>

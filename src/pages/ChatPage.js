@@ -1,11 +1,11 @@
 import React from 'react';
-import './ChatPage.scss'
+import './ChatPage.scss';
 import ChatBox from '../components/ChatBox';
 
-const ChatPage = ({pathname}) => {
+const ChatPage = ({ pathname }) => {
   let title = '';
   let owner = '';
-  switch(pathname) {
+  switch (pathname) {
     case '/chat/manager':
       owner = 'Alepa';
       title = 'Chat with Alepa manager';
@@ -19,9 +19,9 @@ const ChatPage = ({pathname}) => {
   }
   return (
     <div className="ChatPage" title={title}>
-      <ChatBox title={title} owner={owner}/>
+      <ChatBox title={title} owner={owner} />
     </div>
   );
-}
+};
 
 export default ChatPage;
