@@ -3,18 +3,20 @@
 
 
 .ReportPage {
-
 	width: 100%;
 	height: 100%;
-	padding: 0 $base-padding-vertical;
+	padding: $base-padding-horizontal $base-padding-vertical;
 
-	.back {
+	/*.back {
 		a {
 			text-decoration: none;
 			background-color: white;
 		}
-	}
+	}*/
+
 	.report-garment {
+		margin-top: $base-margin-vertical*2; 
+		margin-bottom: $base-margin-vertical*2; 
 		background-color: $secondary-background-color;
 		padding: $base-padding;
 		@include box-shadow();
@@ -39,26 +41,50 @@
 				}
 			}
 		}
+		
+		.picture-container {
+			
+			.title {
+				padding: $base-padding-horizontal 0;
+				text-align: center;
+			}
 
-		.title {
-			padding: $base-padding-horizontal 0;
-			text-align: center;
-			//font-size: 2em;
+			.picture {
+				background-color: white;
+				width: 90vw;
+				height: 90vw;
+			}	
 		}
 
-		.picture-container {
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			
-			.picture {
+		.description-container {
+			.title {
+				padding: $base-padding-horizontal 0;
+				text-align: center;
+			}
+			.garment-picture {
+				display: flex;
+				flex-direction: row;
+				justify-content: center;
+				align-items: center;
+				.picture {
+					background-color: white;
+					height: $img-base-size*0.6;
+					width: $img-base-size*0.6; 
+				}
+				.edit-picture {
 
-			background-color: white;
-			width: 90vw;
-			height: 90vw;
-		}	
-		}	
+				}
+			}
+			
+
+			.description {
+
+			}
+		}
+		
+
+		
+
 
 	}
-
 }
