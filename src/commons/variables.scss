@@ -13,18 +13,20 @@ $base-margin: 2vw;
 $base-margin-vertical: 1vh;
 $base-margin-horizontal: 2vw;
 
-$base-font-medium: 1.6rem;
-$base-font-small: 1.2rem;
-$base-font-size: 0.9em;
-$font-size-tiny: 0.8rem;
-
 $base-border-radius: 8px;
 $base-border-width: 8px;
 
 $primary-button-color: #0B3F8D;
 
-$list-font-size: 1em;
-
-
 $img-background-color: gray * 1.6;
 $img-base-size: 18vw;
+
+// http://codepen.io/anon/pen/aWmEbw
+// These values are the minimum and maximum viewport sizes to apply the font scaling
+$min_width: 320px;
+$max_width: 768px;
+
+// These values represent the range of fon-tsize to apply  
+// These values effect the base font-size, headings and other elements will scale proportionally
+$min_font: 14px;
+$max_font: 24px; 

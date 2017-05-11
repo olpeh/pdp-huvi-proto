@@ -15,7 +15,6 @@
         align-content: center;
         padding: $base-padding-horizontal $base-padding-vertical;
         .location {
-          font-size: 0.8em;
           align-self: flex-end;
           font-weight: bold;
         }
@@ -44,9 +43,6 @@
           }
           .center {
             flex: 2;
-            .description {
-              font-size: 0.8em;
-            }
             .name {
               font-weight: bold;
             }
@@ -77,7 +73,6 @@
               a {
                 text-decoration: none;
                 .text {
-                  font-size: 0.75em;
                   color: $secondary-background-color;
                 }
               }

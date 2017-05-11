@@ -11,7 +11,6 @@
   flex-direction: column;
 
   .LaundryInfo-heading {
-    font-size: $base-font-medium;
     flex: 1;
     text-align: center;
     padding: $base-padding-vertical $base-padding-horizontal;
@@ -113,7 +112,6 @@
 
           .weekday-data-text {
             flex: 1;
-            font-size: $font-size-tiny;
           }
 
           .weekday-data-details {
