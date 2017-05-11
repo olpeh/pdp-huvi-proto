@@ -19,7 +19,7 @@ class Item extends React.Component {
             <div className="model">Model:{this.props.model}</div>
             <div className="price">Price: {this.props.price}€</div>
             <div className="description">{this.props.description}</div>
-            <div className="size">Sizes: 
+            <div className="sizes">Sizes: 
               {this.props.sizes.map(function(size, index) {
                 return <span key={index}>{!!index && ', '}{size}</span>;
               })}
@@ -30,7 +30,7 @@ class Item extends React.Component {
             <div className="icon">
               <Link to="/store">              
                 <img src={require('../img/red/store.svg')} alt="" />
-                <div className="text">Request more</div>
+                <div className="text">Request</div>
               </Link>
             </div>
           </div>
