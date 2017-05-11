@@ -22,58 +22,86 @@
     align-items: flex-end;
   }
 
-  .LaundryInfo-week-calendar {
+  .LaundryInfo-week-calendar-wrapper-wrapper {
     display: flex;
     flex: 16;
     flex-direction: row;
-    justify-content: space-around;
-    align-content: stretch;
+    width: 100vw;
+    overflow-x: scroll !important;
+    overflow-y: visible !important;
+    padding-top: $base-padding-vertical;
+    padding-bottom: $base-padding-vertical;
+    padding-right: $base-padding-vertical;
 
-    .week-calendar-day {
+    .LaundryInfo-week-calendar-wrapper {
       display: flex;
-      flex-direction: column;
       flex: 1;
-      justify-content: center;
-      background: $secondary-background-color;
-      @include box-shadow();
+      flex-direction: row;
+      width: 177vw;
 
-      &:not(:first-child) {
-        margin-left: $base-padding-horizontal / 2;
-      }
-
-      &:not(:last-child) {
-        margin-right: $base-padding-horizontal / 2;
-        
-        &.Friday {
-          margin-right: 2 * $base-padding-horizontal;
-        }
-      }
-
-      .weekday-short {
-        flex: 1;
-        text-align: center;
-        font-weight: bold;
+      .LaundryInfo-week-calendar {
         display: flex;
-        align-items: center;
-        justify-content: center;
+        width: 100vw;
+        flex-direction: row;
+        justify-content: space-around;
+        align-content: stretch;
 
-        .current {
-          background: $primary-color;
-          color: $secondary-background-color;
-          height: 100%;
-          width: 100%;
+        .week-0 {
+          margin-right: $base-padding-horizontal;
+        }
+
+        .week-1 {
+          margin-right: 4 * $base-padding-horizontal;
+        }
+
+        .week-calendar-day {
           display: flex;
-          align-items: center;
+          flex-direction: column;
+          flex: 1;
           justify-content: center;
+          background: $secondary-background-color;
+          @include box-shadow();
+
+          &:not(:first-child) {
+            margin-left: $base-padding-horizontal / 2;
+          }
+
+          &:not(:last-child) {
+            margin-right: $base-padding-horizontal / 2;
+            
+            &.Friday {
+              margin-right: 2 * $base-padding-horizontal;
+            }
+          }
+
+          .weekday-short {
+            flex: 1;
+            text-align: center;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .current {
+              background: $primary-color;
+              color: $secondary-background-color;
+              height: 100%;
+              width: 100%;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+            }
+          }
         }
       }
     }
   }
 
+
   .LaundryInfo-details-wrapper {
     display: flex;
     flex: 10;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: space-between;
     align-content: stretch;
     margin: $base-padding-vertical 0;
@@ -81,22 +109,25 @@
     .LaundryInfo-details {
       background: $secondary-background-color;
       padding: $base-padding-vertical $base-padding-horizontal;
-      flex: 3;
+      flex: 1;
       display: flex;
       flex-direction: column;
       justify-content: space-between;
       align-content: stretch;
       @include box-shadow();
+      width: 60vw;
 
       .LaundryInfo-details-heading {
         flex: 1;
       }
 
       .weekday-data {
-        flex: 9;
+        flex: 1;
+        flex-direction: row;
 
         .weekday-data-wrapper {
-          justify-content: flex-start;
+          align-items: stretch;
+          flex-direction: row;
 
           .weekday-data-icon {
             background-position: left;
@@ -106,13 +137,15 @@
           .weekday-data-text {
             flex: 1;
           }
-
-          .weekday-data-details {
-            flex: 6;
-          }
-
         }
       }
+    }
+
+    .LaundryInfo-notification {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .LaundryInfo-week-number {
@@ -137,14 +170,6 @@
       align-items: center;
       align-content: stretch;
       margin: $base-padding-vertical / 2 $base-padding-horizontal;
-
-      &:first-child {
-        margin-top: $base-padding-vertical;
-      }
-
-      &:last-child {
-        margin-bottom: $base-padding-vertical;
-      }
 
       .weekday-data-text {
         align-self: center;
