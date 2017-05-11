@@ -11,7 +11,7 @@ const ContactPage = () => (
       </Link>
       <Link className="ContactPage-link" to="chat/manager">
         Chat with Alepa manager
-        <div className="ContactPage-icon chat-icon" />
+        <div className="ContactPage-icon chat-icon-alepa" />
       </Link>
       <a className="ContactPage-link" href="tel:12345678">
         Call customer service
