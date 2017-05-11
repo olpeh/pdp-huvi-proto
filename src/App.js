@@ -18,7 +18,7 @@ const Inventory = () => <InventoryPage />;
 const Laundry = () => <LaundryPage />;
 const Contact = () => <ContactPage />;
 const Chat = ({ location }) => <ChatPage {...location} />;
-const Report = () => <ReportPage />;
+const Report = props => <ReportPage {...props} />;
 const Scan = () => <ScanPage />;
 const Store = () => <StorePage />;
 
@@ -32,7 +32,7 @@ const App = props => (
         <Route path="/laundry" component={Laundry} />
         <Route path="/contact" component={Contact} />
         <Route path="/chat" component={Chat} />
-        <Route path="/report" component={Report} />
+        <Route path="/report/:garment" component={Report} />
         <Route path="/scan" component={Scan} />
         <Route path="/store" component={Store} />
       </div>

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class GarmentInstance extends React.Component {
   render() {
@@ -18,15 +19,15 @@ class GarmentInstance extends React.Component {
             <div className="id">ID: {this.props.id}</div>
             <div className="size">Size: {this.props.size}</div>
           </div>
-
           <div className="right">
             <div className="icon">
-              <div className="image">
+              <Link to={'/report/' + this.props.id}>
                 <img src={require('../img/red/communication.svg')} alt="" />
-              </div>
-              <div className="text">Report damage</div>
+                <div className="text">Report damage</div>
+              </Link>
             </div>
           </div>
+
         </div>
       </div>
     );
