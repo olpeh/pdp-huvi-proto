@@ -37,6 +37,21 @@
     padding-bottom: $base-padding-vertical;
     padding-right: $base-padding-vertical;
 
+    .scroll-arrow-indicator {
+      display: block;
+      position: absolute;
+      right: $base-padding-horizontal / 4;
+      font-size: xx-large;
+      font-weight: bold;
+      color: $primary-color;
+      top: 40%;
+      transform: scale(1, 1.5);
+
+      &.hide {
+        display: none;
+      }
+    }
+
     .LaundryInfo-week-calendar-wrapper {
       display: flex;
       flex: 1;
