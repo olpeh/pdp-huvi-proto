@@ -21,7 +21,7 @@ class GarmentInstance extends React.Component {
           <div className="right">
             <div className="icon">
               <Link to={'/report/' + this.props.id}>
-                <img src={require('../img/red/communication.svg')} alt="" />
+                <img src={require('../img/red/brokenpants.svg')} alt="" />
                 <div className="text">Report damage</div>
               </Link>
             </div>

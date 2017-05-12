@@ -14,7 +14,7 @@ const ContactPage = () => (
         <div className="ContactPage-icon chat-icon-alepa" />
       </Link>
       <a className="ContactPage-link" href="tel:12345678">
-        Call customer service
+        Call Lindström customer service
         <div className="ContactPage-icon call-icon" />
       </a>
     </div>

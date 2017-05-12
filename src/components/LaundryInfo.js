@@ -2,9 +2,10 @@ import React from 'react';
 import moment from 'moment';
 import './LaundryInfo.scss';
 
-function renderDate(x) {
+function renderDate(x, weekday) {
+  const classes = `weekday-date date-${weekday}`;
   return (
-    <div className="weekday-date">
+    <div className={classes}>
       {moment().add(x, 'days').format('DD.MM.')}
     </div>
   );
@@ -233,45 +234,6 @@ const LaundryInfo = () => {
         },
       ],
     },
-    {
-      weekdayData: [
-        {
-          weekday: weekdayNow % 7,
-          day: weekdays[(weekdayNow - 1) % 7],
-          dayShort: weekdaysShort[(weekdayNow - 1) % 7],
-        },
-        {
-          weekday: (weekdayNow + 1) % 7,
-          day: weekdays[weekdayNow % 7],
-          dayShort: weekdaysShort[weekdayNow % 7],
-        },
-        {
-          weekday: (weekdayNow + 2) % 7,
-          day: weekdays[(weekdayNow + 1) % 7],
-          dayShort: weekdaysShort[(weekdayNow + 1) % 7],
-        },
-        {
-          weekday: (weekdayNow + 3) % 7,
-          day: weekdays[(weekdayNow + 2) % 7],
-          dayShort: weekdaysShort[(weekdayNow + 2) % 7],
-        },
-        {
-          weekday: (weekdayNow + 4) % 7,
-          day: weekdays[(weekdayNow + 3) % 7],
-          dayShort: weekdaysShort[(weekdayNow + 3) % 7],
-        },
-        {
-          weekday: (weekdayNow + 5) % 7,
-          day: weekdays[(weekdayNow + 4) % 7],
-          dayShort: weekdaysShort[(weekdayNow + 4) % 7],
-        },
-        {
-          weekday: (weekdayNow + 6) % 7,
-          day: weekdays[(weekdayNow + 5) % 7],
-          dayShort: weekdaysShort[(weekdayNow + 5) % 7],
-        },
-      ],
-    },
   ];
 
   const remainingGarments = {
@@ -310,7 +272,7 @@ const LaundryInfo = () => {
                   const classes = `week-calendar-day ${weekday.day} week week-${weekIndex}`;
                   return (
                     <div className={classes} key={weekday.day}>
-                      {renderDate(index + weekIndex * 7)}
+                      {renderDate(index + weekIndex * 7, weekday.weekday)}
                       {renderWeekdayData(weekday)}
                       {renderWeekdayShort(weekday, weekIndex)}
                     </div>

@@ -41,7 +41,7 @@
         padding-bottom: 2 * $base-padding-vertical;
         background-color: $secondary-background-color;
         @include box-shadow();
-        
+
         .name {
             align-self: flex-start;
             margin-left: -$base-padding-horizontal;
@@ -53,7 +53,7 @@
             padding: $base-padding-vertical $base-padding-horizontal;
             font-weight: bold;
         }
-    
+
         .stationary-info {
           display: flex;
           flex-direction: column;
@@ -116,6 +116,9 @@
             }
 
             .right {
+              display: flex;
+              align-items: center;
+
               .icon {
                 @include box-shadow();
                 background-color: white;
@@ -127,14 +130,20 @@
                   justify-content: center;
                   align-items: center;
                   text-decoration: none;
+                  width: 14vw;
+                  height: 8vh;
 
                   img {
-                    height: $img-base-size*0.75;
-                    width: $img-base-size*0.75;
+                    width: 8vw;
+                    height: 4vh;
                   }
 
                   .text {
                     color: $secondary-background-color;
+                    width: 100%;
+                    margin: 0;
+                    text-align: center;
+                    @include responsive-font-size();
                   }
                 }
               }
@@ -144,6 +153,7 @@
           .showall {
             height: 0;
             position: relative;
+            left: 2vw;
             top: -2 * $base-padding-vertical;
             display: flex;
             flex-direction: column;
@@ -157,8 +167,6 @@
           max-height: 0;
           opacity: 0;
           overflow: hidden;
-          // animation: slide 0s ease-out 0.6s backwards;
-          
 
           &.expanded {
             display: block;
@@ -191,7 +199,7 @@
             .columns {
               display: flex;
               flex-direction: row;
-              justify-content: space-around;
+              justify-content: space-between;
               padding-top: $base-padding-horizontal;
               padding-bottom: $base-padding-horizontal;
 
@@ -199,11 +207,9 @@
                 .icon {
                   background-color: $img-background-color;
                   @include box-shadow();
-                  width: $img-base-size;
-                  height: $img-base-size;
                   padding: $base-padding;
-                  width: $img-base-size*0.75;
-                  height: $img-base-size*0.75;
+                  width: $img-base-size * 0.75;
+                  height: $img-base-size * 0.75;
 
                   img {
                     max-width: 100%;
@@ -217,6 +223,7 @@
                   @include box-shadow();
                   background-color: white;
                   padding: $base-padding;
+                  width: 18vw;
 
                   a {
                     text-decoration: none;
@@ -224,10 +231,11 @@
                     flex-direction: column;
                     justify-content: center;
                     align-items: center;
+                    font-size: smaller;
 
                     img {
-                      width: $img-base-size*0.5;
-                      height: $img-base-size*0.5;
+                      width: $img-base-size * 0.5;
+                      height: $img-base-size * 0.5;
                     }
 
                     .text {

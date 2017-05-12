@@ -1,3 +1,14 @@
 @mixin box-shadow() {
   box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
 }
+
+@mixin responsive-font-size($factor:1) {
+
+  @media (min-width: $min_width) and (max-width: $max_width){
+    font-size: calc( $min_font + ($max_font - $min_font) * $factor * ( (100vw - $min_width) / ( $max_width - $min_width) ));
+  }
+
+  @media (min-width: $max_width){
+    font-size: $factor * $max_font;
+  }
+}

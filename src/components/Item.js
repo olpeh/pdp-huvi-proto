@@ -15,7 +15,6 @@ class Item extends React.Component {
 
           <div className="center">
             <div className="model">Model: {this.props.model}</div>
-            <div className="price">Price: {this.props.price}€</div>
             <div className="description">{this.props.description}</div>
             <div className="sizes">
               Sizes:
