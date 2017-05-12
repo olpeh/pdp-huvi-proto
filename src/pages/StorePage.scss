@@ -12,11 +12,24 @@
       .Item {
         background-color: $secondary-background-color;
         @include box-shadow;
-        margin-bottom: $base-margin-horizontal;
+        margin-bottom: $base-margin-vertical;
         display: flex;
         flex-direction: column;
         align-content: center;
-        padding: $base-padding-horizontal $base-padding-vertical;
+        padding: $base-padding-vertical $base-padding-horizontal;
+
+        .Item-name {
+          margin-left: -$base-padding-horizontal;
+          margin-right: -$base-padding-horizontal;
+          margin-top: -$base-padding-vertical;
+          margin-bottom: $base-padding-vertical;
+          background: $primary-color;
+          color: $secondary-background-color;
+          padding: $base-padding-vertical $base-padding-horizontal;
+          font-weight: bold;
+          color:  $secondary-background-color;
+          background:  $primary-color;
+        }
 
         .location {
           align-self: flex-end;
@@ -28,8 +41,8 @@
           flex-direction: row;
           align-items: center;
           justify-content: center;
-          padding-top: $base-padding-horizontal;
-          padding-bottom: $base-padding-horizontal;
+          padding-top: $base-padding-vertical;
+          padding-bottom: $base-padding-vertical;
 
           .left {
             flex: 1;
@@ -40,8 +53,8 @@
               width: $img-base-size;
               height: $img-base-size;
               padding: $base-padding;
-              width: $img-base-size*0.75;
-              height: $img-base-size*0.75;
+              width: $img-base-size * 0.75;
+              height: $img-base-size * 0.75;
 
               img {
                 max-width: 100%;
@@ -80,7 +93,7 @@
               height: 10vw;
               @include box-shadow();
               background-color: white;
-              padding: $base-padding;
+              padding: $base-padding-vertical $base-padding-horizontal;
               display: flex;
               flex-direction: column;
               justify-content: center;

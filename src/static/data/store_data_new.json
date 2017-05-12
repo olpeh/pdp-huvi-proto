@@ -2,7 +2,7 @@
 	{
 		"name": "Winter Jacket",
 		"model": "SRX350",
-		"description": "Chest pockets, pen pocket, horizontal/vertical pull-out ID pocket, zipped/mobile phone pocket, double hip pockets and an open inside pocket. Sleeves with adjustable elasticated cuffs. Straight, adjustable hem. Extended back hem. Chin guard. Front storm flap.",
+		"description": "Chest pockets, pen pocket, horizontal/vertical pull-out ID pocket, zipped/mobile phone pocket, double hip pockets and an open inside pocket. Sleeves with adjustable elasticated cuffs.",
 		"img" : {
 			"src" : "jacket.svg",
 			"alt" : "Image Here!"
@@ -13,7 +13,7 @@
 	{
 		"name": "Heavy Duty Trousers",
 		"model": "DHS333",
-		"description": "Technician work trousers. Knee pockets in CORDURA®. Two reinforced free nail pockets, which can be placed inside the front pockets with bellows Two back pockets with bellows. Certified according to EN 14404 when used with EN14404 certified kneepads style: 4018, 4000, 4000",
+		"description": "Technician work trousers. Knee pockets in CORDURA®. Two reinforced free nail pockets, which can be placed inside the front pockets with bellows Two back pockets with bellows.",
 		"img" : {
 			"src" : "pants.svg",
 			"alt" : "Image here!"

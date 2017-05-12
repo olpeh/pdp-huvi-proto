@@ -5,9 +5,8 @@ class Item extends React.Component {
   render() {
     return (
       <div className="Item">
-
+        <div className="Item-name">{this.props.name}</div>
         <div className="columns">
-
           <div className="left">
             <div className="icon">
               <img src={require('../img/white/' + this.props.img.src)} alt="" />
@@ -15,12 +14,12 @@ class Item extends React.Component {
           </div>
 
           <div className="center">
-            <div className="name">Name: {this.props.name}</div>
-            <div className="model">Model:{this.props.model}</div>
+            <div className="model">Model: {this.props.model}</div>
             <div className="price">Price: {this.props.price}€</div>
             <div className="description">{this.props.description}</div>
             <div className="sizes">
               Sizes:
+              {' '}
               {this.props.sizes.map(function(size, index) {
                 return <span key={index}>{!!index && ', '}{size}</span>;
               })}
@@ -36,7 +35,6 @@ class Item extends React.Component {
             </div>
           </div>
         </div>
-
       </div>
     );
   }
