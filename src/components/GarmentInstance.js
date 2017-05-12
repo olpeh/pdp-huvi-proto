@@ -14,7 +14,6 @@ class GarmentInstance extends React.Component {
             </div>
           </div>
           <div className="center">
-            <div className="name">Name: {this.props.name}</div>
             <div className="model">Model: {this.props.model}</div>
             <div className="id">ID: {this.props.id}</div>
             <div className="size">Size: {this.props.size}</div>

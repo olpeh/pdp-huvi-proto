@@ -44,44 +44,37 @@ class Garment extends React.Component {
 
     return (
       <div className="Garment">
+        <div className="name">{this.props.name}</div>
         <div className="stationary-info">
-          <div className="name">{this.props.name}</div>
-
-          <div className="columns">
-
-            <div className="left">
-
-              <div className="icon">
-                <div className="top">
-                  <img
-                    src={require('../img/white/' + this.props.img.src)}
-                    alt=""
-                  />
+          {!this.state.expanded &&
+            <div className="columns">
+              <div className="left">
+                <div className="icon">
+                  <div className="top">
+                    <img
+                      src={require('../img/white/' + this.props.img.src)}
+                      alt=""
+                    />
+                  </div>
+                  <div className="middle" />
+                  <div className="bottom" />
                 </div>
-                <div className="middle" />
-                <div className="bottom" />
               </div>
-            </div>
-
-            <div className="center">
-              <div className="size">Sizes: {sizes_string}</div>
-              <div className="amount">
-                You have {this.state.instances.length}
+              <div className="center">
+                <div className="size">Sizes: {sizes_string}</div>
+                <div className="amount">
+                  You have {this.state.instances.length}
+                </div>
               </div>
-            </div>
-
-            <div className="right">
-
-              <div className="icon">
-
-                <Link to="/store">
-                  <img src={require('../img/red/store.svg')} alt="" />
-                  <div className="text">Request more</div>
-                </Link>
-
+              <div className="right">
+                <div className="icon">
+                  <Link to="/store">
+                    <img src={require('../img/red/store.svg')} alt="" />
+                    <div className="text">Request more</div>
+                  </Link>
+                </div>
               </div>
-            </div>
-          </div>
+            </div>}
 
           {!this.state.expanded &&
             <div className="showall">
@@ -93,7 +86,6 @@ class Garment extends React.Component {
                 text={toggle_message + ' ' + garment_name_genitive}
               />
             </div>}
-
         </div>
 
         <div className={expanded}>
@@ -123,7 +115,6 @@ class Garment extends React.Component {
             />
             <div className="text">Minimize</div>
           </div>}
-
       </div>
     );
   }

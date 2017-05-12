@@ -2,239 +2,266 @@
 @import '../commons/mixins';
 
 .InventoryPage {
-	width: 100%;
-	height: 100%;
-	padding: 0 $base-padding-vertical;
+  width: 100%;
+  height: 100%;
+  padding: 0 $base-padding-vertical;
 
-	.QR-code-info {
-		margin: 2 * $base-margin-horizontal 2 * $base-margin-vertical $base-margin-horizontal 2 * $base-margin-vertical;
-		padding: $base-padding-horizontal 2 * $base-padding-vertical;
-		display: flex;
-		flex-direction: row;
-		justify-content:  center;
-		align-items: center;
-		flex-shrink: 0;
-		background-color: $secondary-background-color;
-		@include box-shadow();
+  .QR-code-info {
+    margin: 2 * $base-margin-horizontal 2 * $base-margin-vertical $base-margin-horizontal 2 * $base-margin-vertical;
+    padding: $base-padding-horizontal 2 * $base-padding-vertical;
+    display: flex;
+    flex-direction: row;
+    justify-content:  center;
+    align-items: center;
+    flex-shrink: 0;
+    background-color: $secondary-background-color;
+    @include box-shadow();
 
-		.image {
-			width: 15vw;
-			height: 15vw;
-			background: url('../img/qr.png') no-repeat center center;
-			background-size: contain;
-		}
+    .image {
+      width: 15vw;
+      height: 15vw;
+      background: url('../img/qr.png') no-repeat center center;
+      background-size: contain;
+    }
 
-		.text {
-			flex: 1;
-			padding-left: $base-padding
-		}
-	}
+    .text {
+      flex: 1;
+      padding-left: $base-padding
+    }
+  }
 
-	.Inventory {
-		padding: $base-padding-horizontal 0;
+  .Inventory {
+    padding: $base-padding-horizontal 0;
 
-		.GarmentList {
+    .GarmentList {
 
-			.Garment {
-				margin-bottom: 4*$base-margin-horizontal;
+      .Garment {
+        margin-bottom: 3 * $base-padding-vertical;
+        padding: $base-padding-vertical $base-padding-horizontal;
+        padding-bottom: 2 * $base-padding-vertical;
+        background-color: $secondary-background-color;
+        @include box-shadow();
+        
+        .name {
+            align-self: flex-start;
+            margin-left: -$base-padding-horizontal;
+            margin-right: -$base-padding-horizontal;
+            margin-top: -$base-padding-vertical;
+            margin-bottom: $base-padding-vertical;
+            background: $primary-color;
+            color: $secondary-background-color;
+            padding: $base-padding-vertical $base-padding-horizontal;
+            font-weight: bold;
+        }
+    
+        .stationary-info {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
 
-				.stationary-info {
-					padding: 1.5*$base-padding-horizontal 2 * $base-padding-vertical 3*$base-padding-horizontal 2 * $base-padding-vertical;
-					background-color: $secondary-background-color;
-					@include box-shadow();
-					display: flex;
-					flex-direction: column;
-					align-items: center;
+          .columns {
+            align-self: flex-start;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content:  space-between;
 
-					.name {
-						align-self: flex-start;
-						margin-bottom: $base-padding-horizontal;
-					}
-					.columns {
-						align-self: flex-start;
-						width: 100%;
-						display: flex;
-						flex-direction: row;
-						justify-content:  space-between;
+            .left {
+              .icon {
+                position: relative;
+                top: 0;
+                left: 0;
 
-						.left {
-							.icon {
-								position: relative;
-								top: 0;
-								left: 0;
+                .top {
+                  position: relative;
+                  top: 0;
+                  left: 0;
+                  background-color: $img-background-color;
+                  @include box-shadow();
+                  width: $img-base-size;
+                  height: $img-base-size;
+                  padding: $base-padding*2;
+                  z-index: 2;
+                  img {
+                    max-width: 100%;
+                    max-height: 100%;
+                  }
+                }
 
-								.top {
-									position: relative;
-									top: 0;
-									left: 0;
-									background-color: $img-background-color;
-									@include box-shadow();
-									width: $img-base-size;
-									height: $img-base-size;
-									padding: $base-padding*2;
-									z-index: 2;
-									img {
-										max-width: 100%;
-										max-height: 100%;
-									}
-								}
+                .middle {
+                  background-color: $img-background-color;
+                  width: $img-base-size;
+                  height: $img-base-size;
+                  position: absolute;
+                  @include box-shadow();
+                  top: 5px;
+                  left: 5px;
+                  padding: 2 * $base-padding;
+                  z-index: 1;
+                }
 
-								.middle {
-									background-color: $img-background-color;
-									width: $img-base-size;
-									height: $img-base-size;
-									position: absolute;
-									@include box-shadow();
-									top: 5px;
-									left: 5px;
-									padding: 2 * $base-padding;
-									z-index: 1;
-								}
+                .bottom {
+                  background-color: $img-background-color;
+                  width: $img-base-size;
+                  height: $img-base-size;
+                  @include box-shadow();
+                  position: absolute;
+                  padding: 2 * $base-padding;
+                  top: 10px;
+                  left: 10px;
+                }
 
-								.bottom {
-									background-color: $img-background-color;
-									width: $img-base-size;
-									height: $img-base-size;
-									@include box-shadow();
-									position: absolute;
-									padding: 2 * $base-padding;
-									top: 10px;
-									left: 10px;
-								}
+              }
 
-							}
+            }
 
-						}
+            .right {
+              .icon {
+                @include box-shadow();
+                background-color: white;
+                padding: $base-padding;
 
-						.right {
-							.icon {
-								@include box-shadow();
-								background-color: white;
-								padding: $base-padding;
+                a {
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: center;
+                  align-items: center;
+                  text-decoration: none;
 
-								a {
-									display: flex;
-									flex-direction: column;
-									justify-content: center;
-									align-items: center;
-									text-decoration: none;
+                  img {
+                    height: $img-base-size*0.75;
+                    width: $img-base-size*0.75;
+                  }
 
-									img {
-										height: $img-base-size*0.75;
-										width: $img-base-size*0.75;
-									}
+                  .text {
+                    color: $secondary-background-color;
+                  }
+                }
+              }
+            }
+          }
 
-									.text {
-										color: $secondary-background-color;
-									}
-								}
-							}
-						}
-					}
+          .showall {
+            height: 0;
+            position: relative;
+            top: -2 * $base-padding-vertical;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+          }
+        }
 
-					.showall {
-						height: 0;
-						position: relative;
-						top: -2 * $base-padding-horizontal;
-						display: flex;
-						flex-direction: column;
-						align-items: center;
-					}
-				}
+        .garment-list {
+          display: none;
+          visibility: hidden;
+          max-height: 0;
+          opacity: 0;
+          overflow: hidden;
+          // animation: slide 0s ease-out 0.6s backwards;
+          
 
-				.garment-list {
-					display: none;
-					padding: 2 * $base-padding-horizontal 0 $base-padding-horizontal 0;
+          &.expanded {
+            display: block;
+            visibility: visible;
+            opacity: 1;
+            animation: slide 2.8s ease-out 0.4s forwards;
+          }
 
-					&.expanded {
-						display: block;
-					}
+          .GarmentInstance {
+            background-color: $secondary-background-color;
+            margin-left: -$base-padding-horizontal;
+            margin-right: -$base-padding-horizontal;
+            margin-top: -$base-padding-vertical;
+            margin-bottom: $base-padding-vertical;
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            padding: $base-padding-vertical $base-padding-horizontal;
+            border-bottom: solid 2px rgba(0, 0, 0, 0.2);
 
-					.GarmentInstance {
-						background-color: $secondary-background-color;
-						@include box-shadow;
-						margin-bottom: $base-margin-horizontal;
-						display: flex;
-						flex-direction: column;
-						align-content: center;
-						padding: $base-padding-horizontal $base-padding-vertical;
+            &:last-child {
+              border-bottom: none;
+              margin-bottom: -8 * $base-padding-vertical;
+            }
 
-						.location {
-							align-self: flex-end;
-							font-weight: bold;
-						}
+            .location {
+              align-self: flex-end;
+            }
 
-						.columns {
-							display: flex;
-							flex-direction: row;
-							justify-content: space-around;
-							padding-top: $base-padding-horizontal;
-							padding-bottom: $base-padding-horizontal;
+            .columns {
+              display: flex;
+              flex-direction: row;
+              justify-content: space-around;
+              padding-top: $base-padding-horizontal;
+              padding-bottom: $base-padding-horizontal;
 
-							.left {
-								.icon {
-									background-color: $img-background-color;
-									@include box-shadow();
-									width: $img-base-size;
-									height: $img-base-size;
-									padding: $base-padding;
-									width: $img-base-size*0.75;
-									height: $img-base-size*0.75;
+              .left {
+                .icon {
+                  background-color: $img-background-color;
+                  @include box-shadow();
+                  width: $img-base-size;
+                  height: $img-base-size;
+                  padding: $base-padding;
+                  width: $img-base-size*0.75;
+                  height: $img-base-size*0.75;
 
-									img {
-										max-width: 100%;
-										max-height: 100%;
-									}
-								}
-							}
+                  img {
+                    max-width: 100%;
+                    max-height: 100%;
+                  }
+                }
+              }
 
-							.center {
-								.name {
-									font-weight: bold;
-								}
-							}
+              .right {
+                .icon {
+                  @include box-shadow();
+                  background-color: white;
+                  padding: $base-padding;
 
-							.right {
-								.icon {
-									@include box-shadow();
-									background-color: white;
-									padding: $base-padding;
+                  a {
+                    text-decoration: none;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
 
-									a {
-										text-decoration: none;
-										display: flex;
-										flex-direction: column;
-										justify-content: center;
-										align-items: center;
+                    img {
+                      width: $img-base-size*0.5;
+                      height: $img-base-size*0.5;
+                    }
 
-										img {
-											width: $img-base-size*0.5;
-											height: $img-base-size*0.5;
-										}
+                    .text {
+                      color: $secondary-background-color;
+                    }
+                  }
+                }
+              }
+            }
+          }
 
-										.text {
-											color: $secondary-background-color;
-										}
-									}
-								}
-							}
-						}
-					}
+          .GarmentInstance:last-child {
+            margin-bottom: 0;
+          }
+        }
 
-					.GarmentInstance:last-child {
-						margin-bottom: 0;
-					}
-				}
+        .minimize {
+          position: relative;
+          height: 0;
+          top: -0.3vh;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+    }
+  }
+}
 
-				.minimize {
-					position: relative;
-					height: 0;
-					top: -4*$base-padding-horizontal;
-					display: flex;
-					flex-direction: column;
-					align-items: center;
-				}
-			}
-		}
-	}
+@keyframes slide {
+  from {
+    max-height: 0;
+  }
+  to {
+    max-height: 1200px;
+  }
 }
