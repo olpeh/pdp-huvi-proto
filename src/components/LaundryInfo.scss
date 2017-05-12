@@ -37,7 +37,7 @@
       display: flex;
       flex: 1;
       flex-direction: row;
-      width: 177vw;
+      width: 366vw;
 
       .LaundryInfo-week-calendar {
         display: flex;
@@ -46,11 +46,11 @@
         justify-content: space-around;
         align-content: stretch;
 
-        .week-0 {
+        .week {
           margin-right: $base-padding-horizontal;
         }
 
-        .week-1 {
+        .week-3 {
           margin-right: 4 * $base-padding-horizontal;
         }
 
@@ -69,8 +69,8 @@
           &:not(:last-child) {
             margin-right: $base-padding-horizontal / 2;
             
-            &.Friday {
-              margin-right: 2 * $base-padding-horizontal;
+            &.Weekend .weekday-short {
+              color: $incactive-color;
             }
           }
 
@@ -174,29 +174,38 @@
       .weekday-data-text {
         align-self: center;
       }
+    }
+  }
 
-      .weekday-data-icon {
-        text-align: right;
-        flex: 1;
-        height: 100%;
-        margin-right: 5px;
+  .arriving-garments {
+    font-size: calc( $min_font + ($max_font - $min_font) * ( (100vw - $min_width) / ( $max_width - $min_width) ));
+  }
 
-        &.jackets {
-          background: url('../img/white/jacket.svg') no-repeat center center;
-        }
+  .weekday-data-icon {
+    text-align: right;
+    flex: 1;
+    height: 100%;
+    margin-right: 5px;
 
-        &.pants {
-          background: url('../img/white/pants.svg') no-repeat center center;
-        }
+    &.jackets {
+      background: url('../img/white/jacket.svg') no-repeat center center;
+    }
 
-        &.shirts {
-          background: url('../img/white/shirt.svg') no-repeat center center;
-        }
+    &.pants {
+      background: url('../img/white/pants.svg') no-repeat center center;
+    }
 
-        &.laundry {
-          background: url('../img/white/laundry.svg') no-repeat center center;
-        }
-      }
+    &.shirts {
+      background: url('../img/white/shirt.svg') no-repeat center center;
+    }
+
+    &.laundry {
+      background: url('../img/white/laundry.svg') no-repeat center center;
+      height: 3vw;
+      width: 3vw;
+      display: inline-block;
+      margin-left: 1vw;
+      margin-top: 0.6vh;
     }
   }
 }
