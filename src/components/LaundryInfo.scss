@@ -57,7 +57,7 @@
         .week-calendar-day {
           display: flex;
           flex-direction: column;
-          flex: 1;
+          flex: 4;
           justify-content: center;
           background: $secondary-background-color;
           @include box-shadow();
@@ -69,8 +69,12 @@
           &:not(:last-child) {
             margin-right: $base-padding-horizontal / 2;
             
-            &.Weekend .weekday-short {
-              color: $incactive-color;
+            &.Saturday,
+            &.Sunday {
+              flex: 3;
+              .weekday-short {
+                color: $incactive-color;
+              }
             }
           }
 
@@ -126,6 +130,7 @@
 
       .LaundryInfo-details-heading {
         flex: 1;
+        font-weight: bold;
       }
 
       .weekday-data {
@@ -153,6 +158,11 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      text-align: center;
+
+      b {
+        font-size: larger;
+      }
     }
 
     .LaundryInfo-week-number {
@@ -186,8 +196,8 @@
 
   .arriving-garments {
     font-size: smaller;
-    font-weight: bold;
     text-align: center;
+    margin: -1 * $base-padding-vertical / 4 -1 *$base-padding-horizontal / 2;
   }
 
   .weekday-data-icon {

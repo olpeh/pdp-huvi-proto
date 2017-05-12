@@ -5,7 +5,7 @@ import './LaundryInfo.scss';
 function renderDate(x) {
   return (
     <div className="weekday-date">
-      {moment().add(x, 'days').format('DD.MM.YYYY')}
+      {moment().add(x, 'days').format('DD.MM.')}
     </div>
   );
 }
@@ -110,144 +110,165 @@ const LaundryInfo = () => {
     'Wednesday',
     'Thursday',
     'Friday',
-    'Weekend',
+    'Saturday',
+    'Sunday',
   ];
-  const weekdaysShort = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat/Sun'];
+  const weekdaysShort = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
 
   const weekData = [
     {
       weekdayData: [
         {
-          weekday: weekdayNow % 6,
-          day: weekdays[(weekdayNow - 1) % 6],
-          dayShort: weekdaysShort[(weekdayNow - 1) % 6],
+          weekday: weekdayNow % 7,
+          day: weekdays[(weekdayNow - 1) % 7],
+          dayShort: weekdaysShort[(weekdayNow - 1) % 7],
         },
         {
-          weekday: (weekdayNow + 1) % 6,
-          day: weekdays[weekdayNow % 6],
-          dayShort: weekdaysShort[weekdayNow % 6],
+          weekday: (weekdayNow + 1) % 7,
+          day: weekdays[weekdayNow % 7],
+          dayShort: weekdaysShort[weekdayNow % 7],
         },
         {
-          weekday: (weekdayNow + 2) % 6,
-          day: weekdays[(weekdayNow + 1) % 6],
-          dayShort: weekdaysShort[(weekdayNow + 1) % 6],
+          weekday: (weekdayNow + 2) % 7,
+          day: weekdays[(weekdayNow + 1) % 7],
+          dayShort: weekdaysShort[(weekdayNow + 1) % 7],
         },
         {
-          weekday: (weekdayNow + 3) % 6,
-          day: weekdays[(weekdayNow + 2) % 6],
-          dayShort: weekdaysShort[(weekdayNow + 2) % 6],
+          weekday: (weekdayNow + 3) % 7,
+          day: weekdays[(weekdayNow + 2) % 7],
+          dayShort: weekdaysShort[(weekdayNow + 2) % 7],
         },
         {
-          weekday: (weekdayNow + 4) % 6,
-          day: weekdays[(weekdayNow + 3) % 6],
-          dayShort: weekdaysShort[(weekdayNow + 3) % 6],
+          weekday: (weekdayNow + 4) % 7,
+          day: weekdays[(weekdayNow + 3) % 7],
+          dayShort: weekdaysShort[(weekdayNow + 3) % 7],
         },
         {
-          weekday: (weekdayNow + 5) % 6,
-          day: weekdays[(weekdayNow + 4) % 6],
-          dayShort: weekdaysShort[(weekdayNow + 4) % 6],
-        },
-      ],
-    },
-    {
-      weekdayData: [
-        {
-          weekday: weekdayNow % 6,
-          day: weekdays[(weekdayNow - 1) % 6],
-          dayShort: weekdaysShort[(weekdayNow - 1) % 6],
+          weekday: (weekdayNow + 5) % 7,
+          day: weekdays[(weekdayNow + 4) % 7],
+          dayShort: weekdaysShort[(weekdayNow + 4) % 7],
         },
         {
-          weekday: (weekdayNow + 1) % 6,
-          day: weekdays[weekdayNow % 6],
-          dayShort: weekdaysShort[weekdayNow % 6],
-        },
-        {
-          weekday: (weekdayNow + 2) % 6,
-          day: weekdays[(weekdayNow + 1) % 6],
-          dayShort: weekdaysShort[(weekdayNow + 1) % 6],
-        },
-        {
-          weekday: (weekdayNow + 3) % 6,
-          day: weekdays[(weekdayNow + 2) % 6],
-          dayShort: weekdaysShort[(weekdayNow + 2) % 6],
-        },
-        {
-          weekday: (weekdayNow + 4) % 6,
-          day: weekdays[(weekdayNow + 3) % 6],
-          dayShort: weekdaysShort[(weekdayNow + 3) % 6],
-        },
-        {
-          weekday: (weekdayNow + 5) % 6,
-          day: weekdays[(weekdayNow + 4) % 6],
-          dayShort: weekdaysShort[(weekdayNow + 4) % 6],
+          weekday: (weekdayNow + 6) % 7,
+          day: weekdays[(weekdayNow + 5) % 7],
+          dayShort: weekdaysShort[(weekdayNow + 5) % 7],
         },
       ],
     },
     {
       weekdayData: [
         {
-          weekday: weekdayNow % 6,
-          day: weekdays[(weekdayNow - 1) % 6],
-          dayShort: weekdaysShort[(weekdayNow - 1) % 6],
+          weekday: weekdayNow % 7,
+          day: weekdays[(weekdayNow - 1) % 7],
+          dayShort: weekdaysShort[(weekdayNow - 1) % 7],
         },
         {
-          weekday: (weekdayNow + 1) % 6,
-          day: weekdays[weekdayNow % 6],
-          dayShort: weekdaysShort[weekdayNow % 6],
+          weekday: (weekdayNow + 1) % 7,
+          day: weekdays[weekdayNow % 7],
+          dayShort: weekdaysShort[weekdayNow % 7],
         },
         {
-          weekday: (weekdayNow + 2) % 6,
-          day: weekdays[(weekdayNow + 1) % 6],
-          dayShort: weekdaysShort[(weekdayNow + 1) % 6],
+          weekday: (weekdayNow + 2) % 7,
+          day: weekdays[(weekdayNow + 1) % 7],
+          dayShort: weekdaysShort[(weekdayNow + 1) % 7],
         },
         {
-          weekday: (weekdayNow + 3) % 6,
-          day: weekdays[(weekdayNow + 2) % 6],
-          dayShort: weekdaysShort[(weekdayNow + 2) % 6],
+          weekday: (weekdayNow + 3) % 7,
+          day: weekdays[(weekdayNow + 2) % 7],
+          dayShort: weekdaysShort[(weekdayNow + 2) % 7],
         },
         {
-          weekday: (weekdayNow + 4) % 6,
-          day: weekdays[(weekdayNow + 3) % 6],
-          dayShort: weekdaysShort[(weekdayNow + 3) % 6],
+          weekday: (weekdayNow + 4) % 7,
+          day: weekdays[(weekdayNow + 3) % 7],
+          dayShort: weekdaysShort[(weekdayNow + 3) % 7],
         },
         {
-          weekday: (weekdayNow + 5) % 6,
-          day: weekdays[(weekdayNow + 4) % 6],
-          dayShort: weekdaysShort[(weekdayNow + 4) % 6],
+          weekday: (weekdayNow + 5) % 7,
+          day: weekdays[(weekdayNow + 4) % 7],
+          dayShort: weekdaysShort[(weekdayNow + 4) % 7],
+        },
+        {
+          weekday: (weekdayNow + 6) % 7,
+          day: weekdays[(weekdayNow + 5) % 7],
+          dayShort: weekdaysShort[(weekdayNow + 5) % 7],
         },
       ],
     },
     {
       weekdayData: [
         {
-          weekday: weekdayNow % 6,
-          day: weekdays[(weekdayNow - 1) % 6],
-          dayShort: weekdaysShort[(weekdayNow - 1) % 6],
+          weekday: weekdayNow % 7,
+          day: weekdays[(weekdayNow - 1) % 7],
+          dayShort: weekdaysShort[(weekdayNow - 1) % 7],
         },
         {
-          weekday: (weekdayNow + 1) % 6,
-          day: weekdays[weekdayNow % 6],
-          dayShort: weekdaysShort[weekdayNow % 6],
+          weekday: (weekdayNow + 1) % 7,
+          day: weekdays[weekdayNow % 7],
+          dayShort: weekdaysShort[weekdayNow % 7],
         },
         {
-          weekday: (weekdayNow + 2) % 6,
-          day: weekdays[(weekdayNow + 1) % 6],
-          dayShort: weekdaysShort[(weekdayNow + 1) % 6],
+          weekday: (weekdayNow + 2) % 7,
+          day: weekdays[(weekdayNow + 1) % 7],
+          dayShort: weekdaysShort[(weekdayNow + 1) % 7],
         },
         {
-          weekday: (weekdayNow + 3) % 6,
-          day: weekdays[(weekdayNow + 2) % 6],
-          dayShort: weekdaysShort[(weekdayNow + 2) % 6],
+          weekday: (weekdayNow + 3) % 7,
+          day: weekdays[(weekdayNow + 2) % 7],
+          dayShort: weekdaysShort[(weekdayNow + 2) % 7],
         },
         {
-          weekday: (weekdayNow + 4) % 6,
-          day: weekdays[(weekdayNow + 3) % 6],
-          dayShort: weekdaysShort[(weekdayNow + 3) % 6],
+          weekday: (weekdayNow + 4) % 7,
+          day: weekdays[(weekdayNow + 3) % 7],
+          dayShort: weekdaysShort[(weekdayNow + 3) % 7],
         },
         {
-          weekday: (weekdayNow + 5) % 6,
-          day: weekdays[(weekdayNow + 4) % 6],
-          dayShort: weekdaysShort[(weekdayNow + 4) % 6],
+          weekday: (weekdayNow + 5) % 7,
+          day: weekdays[(weekdayNow + 4) % 7],
+          dayShort: weekdaysShort[(weekdayNow + 4) % 7],
+        },
+        {
+          weekday: (weekdayNow + 6) % 7,
+          day: weekdays[(weekdayNow + 5) % 7],
+          dayShort: weekdaysShort[(weekdayNow + 5) % 7],
+        },
+      ],
+    },
+    {
+      weekdayData: [
+        {
+          weekday: weekdayNow % 7,
+          day: weekdays[(weekdayNow - 1) % 7],
+          dayShort: weekdaysShort[(weekdayNow - 1) % 7],
+        },
+        {
+          weekday: (weekdayNow + 1) % 7,
+          day: weekdays[weekdayNow % 7],
+          dayShort: weekdaysShort[weekdayNow % 7],
+        },
+        {
+          weekday: (weekdayNow + 2) % 7,
+          day: weekdays[(weekdayNow + 1) % 7],
+          dayShort: weekdaysShort[(weekdayNow + 1) % 7],
+        },
+        {
+          weekday: (weekdayNow + 3) % 7,
+          day: weekdays[(weekdayNow + 2) % 7],
+          dayShort: weekdaysShort[(weekdayNow + 2) % 7],
+        },
+        {
+          weekday: (weekdayNow + 4) % 7,
+          day: weekdays[(weekdayNow + 3) % 7],
+          dayShort: weekdaysShort[(weekdayNow + 3) % 7],
+        },
+        {
+          weekday: (weekdayNow + 5) % 7,
+          day: weekdays[(weekdayNow + 4) % 7],
+          dayShort: weekdaysShort[(weekdayNow + 4) % 7],
+        },
+        {
+          weekday: (weekdayNow + 6) % 7,
+          day: weekdays[(weekdayNow + 5) % 7],
+          dayShort: weekdaysShort[(weekdayNow + 5) % 7],
         },
       ],
     },
@@ -277,7 +298,7 @@ const LaundryInfo = () => {
         . Have a nice workday!
       </div>
       <div className="LaundryInfo-date-info">
-        {moment().format('DD.MM.YYYY')}
+        Week {moment().format('W')}
       </div>
       <div className="LaundryInfo-week-calendar-wrapper-wrapper">
         <div className="LaundryInfo-week-calendar-wrapper">
