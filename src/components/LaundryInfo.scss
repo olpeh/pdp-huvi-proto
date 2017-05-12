@@ -74,6 +74,13 @@
             }
           }
 
+          .weekday-date {
+            font-size: smaller;
+            text-align: center;
+            background: $primary-color;
+            color: $secondary-background-color;
+          }
+
           .weekday-short {
             flex: 1;
             text-align: center;
@@ -178,7 +185,9 @@
   }
 
   .arriving-garments {
-    font-size: calc( $min_font + ($max_font - $min_font) * ( (100vw - $min_width) / ( $max_width - $min_width) ));
+    font-size: smaller;
+    font-weight: bold;
+    text-align: center;
   }
 
   .weekday-data-icon {

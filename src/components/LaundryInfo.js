@@ -2,6 +2,14 @@ import React from 'react';
 import moment from 'moment';
 import './LaundryInfo.scss';
 
+function renderDate(x) {
+  return (
+    <div className="weekday-date">
+      {moment().add(x, 'days').format('DD.MM.YYYY')}
+    </div>
+  );
+}
+
 function renderWeekdayShort(weekday, weekIndex) {
   return (
     <div className="weekday-short">
@@ -277,10 +285,11 @@ const LaundryInfo = () => {
             const weekClasses = `LaundryInfo-week-calendar week-${weekIndex}`;
             return (
               <div className={weekClasses} key={weekIndex}>
-                {week.weekdayData.map(weekday => {
+                {week.weekdayData.map((weekday, index) => {
                   const classes = `week-calendar-day ${weekday.day} week week-${weekIndex}`;
                   return (
                     <div className={classes} key={weekday.day}>
+                      {renderDate(index + weekIndex * 7)}
                       {renderWeekdayData(weekday)}
                       {renderWeekdayShort(weekday, weekIndex)}
                     </div>
