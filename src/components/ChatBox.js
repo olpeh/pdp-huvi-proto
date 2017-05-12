@@ -20,21 +20,27 @@ class ChatBox extends React.Component {
     this.appendChatMessage = this.appendChatMessage.bind(this);
     this.clearMessages = this.clearMessages.bind(this);
   }
+
   appendChatMessage(text) {
-    const owner = 'Me';
-    let newMessage = {
-      id: this.state.messages.length + 1,
-      timestamp: new Date().getTime(),
-      owner: owner,
-      text: text,
-    };
-    const messageDiv = document.querySelector('.ChatBox-MessageList');
-    messageDiv.scrollTop = messageDiv.scrollHeight - 50;
-    this.setState({ messages: [...this.state.messages, newMessage] });
+    text = text.trim();
+    if (text.length) {
+      const owner = 'me';
+      let newMessage = {
+        id: this.state.messages.length + 1,
+        timestamp: new Date().getTime(),
+        owner: owner,
+        text: text,
+      };
+      const messageDiv = document.querySelector('.ChatBox-MessageList');
+      messageDiv.scrollTop = messageDiv.scrollHeight - 50;
+      this.setState({ messages: [...this.state.messages, newMessage] });
+    }
   }
+
   clearMessages() {
     this.setState({ messages: [] });
   }
+
   render() {
     return (
       <div className="ChatBox">

@@ -7,13 +7,13 @@ const ChatPage = ({ pathname }) => {
   let owner = '';
   switch (pathname) {
     case '/chat/manager':
-      owner = 'Alepa';
+      owner = 'alepa';
       title = 'Chat with Alepa manager';
       break;
 
     default:
     case '/chat/lindstrom':
-      owner = 'Lindström';
+      owner = 'lindström';
       title = 'Chat with Lindström';
       break;
   }

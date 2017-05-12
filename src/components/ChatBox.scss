@@ -23,9 +23,51 @@
     width: 92%;
     max-height: 50vh;
     overflow-y: auto;
+
+    .message {
+      background: $primary-color;
+      color: $secondary-background-color;
+      padding: $base-padding-vertical $base-padding-horizontal;
+      margin-bottom: $base-padding-vertical;
+      width: 50vw;
+      border-radius: $base-padding;
+      float: left;
+      position: relative;
+
+      .corner-triangle {
+        display: block;
+        position: absolute;
+        width: 15px;
+        left: 10px;
+        bottom: -5px;
+        height: 15px;
+        background: $primary-color;
+        transform: rotate(-45deg);
+      }
+
+      &.from-me {
+        float: right;
+        .corner-triangle {
+          left: 49vw;
+        }
+      }
+
+      .message-time {
+        font-size: x-small;
+        float: right;
+        margin-top: 1 * $base-padding-horizontal;
+      }
+    }
   }
 
   .ChatBox-PostMessageForm {
     flex: 1;
+    margin-bottom: $base-padding-vertical;
+
+    input {
+      font-size: xx-large;
+      background: $primary-color;
+      color: $dark-text-color;
+    }
   }
 }

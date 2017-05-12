@@ -4,6 +4,7 @@ $primary-background-color: #D30031;
 $secondary-background-color: #E30639;
 $header-background-color: #DB0334;
 $incactive-color: #B2B2B2;
+$dark-text-color: #383838;
 
 $base-padding: 2vw;
 $base-padding-vertical: 2vh;
@@ -26,7 +27,7 @@ $img-base-size: 18vw;
 $min_width: 320px;
 $max_width: 768px;
 
-// These values represent the range of fon-tsize to apply  
+// These values represent the range of fon-tsize to apply
 // These values effect the base font-size, headings and other elements will scale proportionally
 $min_font: 14px;
-$max_font: 24px; 
+$max_font: 24px;
