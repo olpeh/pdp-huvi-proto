@@ -7,9 +7,9 @@ class ReportPage extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-    	page: 1,
+      page: 1,
       garment: this.getGarmentInfo(),
-      picture: ""
+      picture: '',
     };
     this.addDescription = this.addDescription.bind(this);
   }
@@ -34,15 +34,13 @@ class ReportPage extends React.Component {
   }
 
   addDescription() {
-  	this.setState({page:2});
+    this.setState({ page: 2 });
   }
 
-
   render() {
-
     console.log(this.state.garment);
 
-  	return (
+    return (
       <div className="ReportPage">
         <div className="report-garment">
           <div className="garment-info">
@@ -64,53 +62,47 @@ class ReportPage extends React.Component {
             </div>
           </div>
           {this.state.page === 1 &&
-          <div className="picture-container">
-          <div className="title">1/3 Take picture of the damage</div>
-            <div className="picture" />
-          <div className="buttons">
-          	<a onClick={this.addDescription}>Next</a>
-          </div>
-          </div>
-        	}
+            <div className="picture-container">
+              <div className="title">1/3 Take picture of the damage</div>
+              <div className="picture" />
+              <div className="buttons">
+                <a onClick={this.addDescription}>Next</a>
+              </div>
+            </div>}
 
-        	{this.state.page === 2 &&
-          <div className="description-container">
-        	
-        	<div className="title">2/3 Describe the damage</div>
-        	<div className="garment-picture">
-        	
-        	<div className="picture"></div>
-        	<div className="edit-picture">Edit</div>
+          {this.state.page === 2 &&
+            <div className="description-container">
 
-        	</div>
-          
-          <div className="description">
-          	<input type="text" />
-          </div>
-          
-          <div className="buttons">
-          	<button>Cancel</button>
-          	<button>OK</button>
-          </div>
-          
-          </div>
-        	}
+              <div className="title">2/3 Describe the damage</div>
+              <div className="garment-picture">
 
-        	{this.state.page === 3 && 
-          <div className="submit-container">
-        		<div className="title">3/3 Send the report</div>
-            <div className="picture"/>
-          <div className="buttons">
-          	<button>Cancel</button>
-          </div>
-          </div>
-        	}
+                <div className="picture" />
+                <div className="edit-picture">Edit</div>
+
+              </div>
+
+              <div className="description">
+                <input type="text" />
+              </div>
+
+              <div className="buttons">
+                <button>Cancel</button>
+                <button>OK</button>
+              </div>
+
+            </div>}
+
+          {this.state.page === 3 &&
+            <div className="submit-container">
+              <div className="title">3/3 Send the report</div>
+              <div className="picture" />
+              <div className="buttons">
+                <button>Cancel</button>
+              </div>
+            </div>}
         </div>
       </div>
-  	);
-    	
-
-    
+    );
   }
 }
 
