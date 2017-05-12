@@ -42,10 +42,10 @@
       position: absolute;
       right: $base-padding-horizontal / 4;
       font-size: xx-large;
-      font-weight: bold;
+      font-weight: 100;
       color: $primary-color;
-      top: 40%;
-      transform: scale(1, 1.5);
+      top: 38%;
+      transform: scale(1, 4.5);
 
       &.hide {
         display: none;
