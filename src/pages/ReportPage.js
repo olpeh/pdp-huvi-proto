@@ -1,5 +1,5 @@
 import React from 'react';
-//import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import GarmentData from '../static/data/garment_data.json';
 import './ReportPage.scss';
 
@@ -9,9 +9,13 @@ class ReportPage extends React.Component {
     this.state = {
       page: 1,
       garment: this.getGarmentInfo(),
-      picture: '',
+      complaint: '',
     };
+    this.takePicture = this.takePicture.bind(this);
     this.addDescription = this.addDescription.bind(this);
+    this.submitDescription = this.submitDescription.bind(this);
+    this.submitReport = this.submitReport.bind(this);
+
   }
 
   getGarmentInfo() {
@@ -32,14 +36,26 @@ class ReportPage extends React.Component {
       }
     }
   }
-
-  addDescription() {
-    this.setState({ page: 2 });
+  takePicture() {
+  	this.setState({ page: 1 });
   }
 
-  render() {
-    console.log(this.state.garment);
+  addDescription() {
+    this.setState({ page: 2, complaint: "" });
+  }
 
+  submitDescription() {
+  	this.setState({ page: 3, complaint: this.refs.complaint.value });	
+  }
+
+  submitReport() {
+  	this.setState({ page: 4});
+  }
+
+
+
+
+  render() {
     return (
       <div className="ReportPage">
         <div className="report-garment">
@@ -54,7 +70,7 @@ class ReportPage extends React.Component {
                 </div>
               </div>
               <div className="right">
-                <div className="name">Name: {this.state.garment.name}</div>
+                <div className="name">{this.state.garment.name}</div>
                 <div className="model">Model: {this.state.garment.model}</div>
                 <div className="id">ID: {this.state.garment.id}</div>
                 <div className="size">Size: {this.state.garment.size}</div>
@@ -63,43 +79,98 @@ class ReportPage extends React.Component {
           </div>
           {this.state.page === 1 &&
             <div className="picture-container">
-              <div className="title">1/3 Take picture of the damage</div>
-              <div className="picture" />
+              <div className="title">1/3 TAKE PICTURE OF THE DAMAGE</div>
+              
+              <div className="picture">
+              	<img src={require("../img/camera.png")} alt=""/>
+              </div>
+              
               <div className="buttons">
-                <a onClick={this.addDescription}>Next</a>
+                <Link className="cancel" to="/inventory">CANCEL</Link>
+                <a className="next" onClick={this.addDescription}>NEXT</a>
               </div>
             </div>}
 
           {this.state.page === 2 &&
             <div className="description-container">
 
-              <div className="title">2/3 Describe the damage</div>
               <div className="garment-picture">
 
-                <div className="picture" />
-                <div className="edit-picture">Edit</div>
+                <div className="picture">
+                	<img src={require("../img/camera.png")} alt=""/>
+                </div>
+                <a onClick={this.takePicture} className="edit-picture">Edit</a>
 
               </div>
+              <div className="title">2/3 DESCRIBE THE DAMAGE</div>
 
               <div className="description">
-                <input type="text" />
+                <textarea ref="complaint" className="text"/>
               </div>
 
               <div className="buttons">
-                <button>Cancel</button>
-                <button>OK</button>
+                <Link className="cancel" to="/inventory">CANCEL</Link>
+                <a className="next" onClick={this.submitDescription}>OK</a>
               </div>
 
             </div>}
 
           {this.state.page === 3 &&
             <div className="submit-container">
-              <div className="title">3/3 Send the report</div>
-              <div className="picture" />
+              <div className="garment-picture">
+
+                <div className="picture">
+                	<img src={require("../img/camera.png")} alt=""/>
+                </div>
+                <a onClick={this.takePicture} className="edit-picture">Edit</a>
+
+              </div>
+              <div className="complaint">
+              	<div className="complaint-description">
+              		<div className="complaint-label">Damage description:</div>
+              		<div className="complaint-text">{this.state.complaint}</div>
+              	</div>
+              	<a onClick={this.addDescription}>Edit</a>
+
+              </div>
+              
+              <div className="title">3/3 SEND REPORT TO LINDSTRÖM</div>
+
               <div className="buttons">
-                <button>Cancel</button>
+
+                <Link className="cancel" to="/inventory">CANCEL</Link>
+                <a onClick={this.submitReport}className="next">SUBMIT</a>
               </div>
             </div>}
+            {this.state.page === 4 &&
+            
+            <div className="submitted-container">
+							<div className="garment-picture">
+
+                <div className="picture">
+                	<img src={require("../img/camera.png")} alt=""/>
+                </div>
+               
+
+              </div>
+              <div className="complaint">
+              	<div className="complaint-description">
+              		<div className="complaint-label">Damage description:</div>
+              		<div className="complaint-text">{this.state.complaint}</div>
+              	</div>
+              </div>
+
+              <div className="thankyou">
+              	<div className="thankyou-info">Thank you for your report.</div>
+              	<div className="thankyou-info">You can drop the damaged garment in the laundry bin.</div>
+              	<div className="thankyou-info">Your workwear will be fixed as soon as possible.</div>
+
+              </div>
+
+
+            </div>}
+
+
         </div>
       </div>
     );
