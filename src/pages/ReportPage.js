@@ -56,7 +56,12 @@ class ReportPage extends React.Component {
       <div className="ReportPage">
         <div className="report-garment">
           <div className="garment-info">
-            <div className="columns">
+            <div className="name">{this.state.garment.name}</div>
+            <div className="model">Model: {this.state.garment.model}</div>
+            <div className="id">ID: {this.state.garment.id}</div>
+            <div className="size">Size: {this.state.garment.size}</div>
+
+            {/*<div className="columns">
               <div className="left">
                 <div className="icon">
                   <img
@@ -71,7 +76,7 @@ class ReportPage extends React.Component {
                 <div className="id">ID: {this.state.garment.id}</div>
                 <div className="size">Size: {this.state.garment.size}</div>
               </div>
-            </div>
+            </div>*/}
           </div>
           {this.state.page === 1 &&
             <div className="picture-container">
