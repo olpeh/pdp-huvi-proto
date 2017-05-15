@@ -321,7 +321,9 @@ class LaundryInfo extends React.Component {
             })}
             {this.state.scrollLeft
               ? null
-              : <div ref="indicator" className="scroll-arrow-indicator">></div>}
+              : <div ref="indicator" className="scroll-arrow-indicator">
+                  &gt;
+                </div>}
           </div>
         </div>
         <div className="LaundryInfo-details-wrapper">

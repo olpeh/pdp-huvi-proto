@@ -15,7 +15,6 @@ class ReportPage extends React.Component {
     this.addDescription = this.addDescription.bind(this);
     this.submitDescription = this.submitDescription.bind(this);
     this.submitReport = this.submitReport.bind(this);
-
   }
 
   getGarmentInfo() {
@@ -37,23 +36,20 @@ class ReportPage extends React.Component {
     }
   }
   takePicture() {
-  	this.setState({ page: 1 });
+    this.setState({ page: 1 });
   }
 
   addDescription() {
-    this.setState({ page: 2, complaint: "" });
+    this.setState({ page: 2, complaint: '' });
   }
 
   submitDescription() {
-  	this.setState({ page: 3, complaint: this.refs.complaint.value });	
+    this.setState({ page: 3, complaint: this.refs.complaint.value });
   }
 
   submitReport() {
-  	this.setState({ page: 4});
+    this.setState({ page: 4 });
   }
-
-
-
 
   render() {
     return (
@@ -80,11 +76,11 @@ class ReportPage extends React.Component {
           {this.state.page === 1 &&
             <div className="picture-container">
               <div className="title">1/3 TAKE PICTURE OF THE DAMAGE</div>
-              
+
               <div className="picture">
-              	<img src={require("../img/camera.png")} alt=""/>
+                <img src={require('../img/camera.png')} alt="" />
               </div>
-              
+
               <div className="buttons">
                 <Link className="cancel" to="/inventory">CANCEL</Link>
                 <a className="next" onClick={this.addDescription}>NEXT</a>
@@ -97,7 +93,7 @@ class ReportPage extends React.Component {
               <div className="garment-picture">
 
                 <div className="picture">
-                	<img src={require("../img/camera.png")} alt=""/>
+                  <img src={require('../img/camera.png')} alt="" />
                 </div>
                 <a onClick={this.takePicture} className="edit-picture">Edit</a>
 
@@ -105,7 +101,7 @@ class ReportPage extends React.Component {
               <div className="title">2/3 DESCRIBE THE DAMAGE</div>
 
               <div className="description">
-                <textarea ref="complaint" className="text"/>
+                <textarea ref="complaint" className="text" />
               </div>
 
               <div className="buttons">
@@ -120,56 +116,56 @@ class ReportPage extends React.Component {
               <div className="garment-picture">
 
                 <div className="picture">
-                	<img src={require("../img/camera.png")} alt=""/>
+                  <img src={require('../img/camera.png')} alt="" />
                 </div>
                 <a onClick={this.takePicture} className="edit-picture">Edit</a>
 
               </div>
               <div className="complaint">
-              	<div className="complaint-description">
-              		<div className="complaint-label">Damage description:</div>
-              		<div className="complaint-text">{this.state.complaint}</div>
-              	</div>
-              	<a onClick={this.addDescription}>Edit</a>
+                <div className="complaint-description">
+                  <div className="complaint-label">Damage description:</div>
+                  <div className="complaint-text">{this.state.complaint}</div>
+                </div>
+                <a onClick={this.addDescription}>Edit</a>
 
               </div>
-              
+
               <div className="title">3/3 SEND REPORT TO LINDSTRÖM</div>
 
               <div className="buttons">
 
                 <Link className="cancel" to="/inventory">CANCEL</Link>
-                <a onClick={this.submitReport}className="next">SUBMIT</a>
+                <a onClick={this.submitReport} className="next">SUBMIT</a>
               </div>
             </div>}
-            {this.state.page === 4 &&
-            
+          {this.state.page === 4 &&
             <div className="submitted-container">
-							<div className="garment-picture">
+              <div className="garment-picture">
 
                 <div className="picture">
-                	<img src={require("../img/camera.png")} alt=""/>
+                  <img src={require('../img/camera.png')} alt="" />
                 </div>
-               
 
               </div>
               <div className="complaint">
-              	<div className="complaint-description">
-              		<div className="complaint-label">Damage description:</div>
-              		<div className="complaint-text">{this.state.complaint}</div>
-              	</div>
+                <div className="complaint-description">
+                  <div className="complaint-label">Damage description:</div>
+                  <div className="complaint-text">{this.state.complaint}</div>
+                </div>
               </div>
 
               <div className="thankyou">
-              	<div className="thankyou-info">Thank you for your report.</div>
-              	<div className="thankyou-info">You can drop the damaged garment in the laundry bin.</div>
-              	<div className="thankyou-info">Your workwear will be fixed as soon as possible.</div>
+                <div className="thankyou-info">Thank you for your report.</div>
+                <div className="thankyou-info">
+                  You can drop the damaged garment in the laundry bin.
+                </div>
+                <div className="thankyou-info">
+                  Your workwear will be fixed as soon as possible.
+                </div>
 
               </div>
 
-
             </div>}
-
 
         </div>
       </div>
