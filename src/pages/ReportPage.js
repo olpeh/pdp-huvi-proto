@@ -40,7 +40,7 @@ class ReportPage extends React.Component {
   }
 
   addDescription() {
-    this.setState({ page: 2, complaint: '' });
+    this.setState({ page: 2});
   }
 
   submitDescription() {
@@ -60,23 +60,6 @@ class ReportPage extends React.Component {
             <div className="model">Model: {this.state.garment.model}</div>
             <div className="id">ID: {this.state.garment.id}</div>
             <div className="size">Size: {this.state.garment.size}</div>
-
-            {/*<div className="columns">
-              <div className="left">
-                <div className="icon">
-                  <img
-                    src={require('../img/white/' + this.state.garment.img.src)}
-                    alt=""
-                  />
-                </div>
-              </div>
-              <div className="right">
-                <div className="name">{this.state.garment.name}</div>
-                <div className="model">Model: {this.state.garment.model}</div>
-                <div className="id">ID: {this.state.garment.id}</div>
-                <div className="size">Size: {this.state.garment.size}</div>
-              </div>
-            </div>*/}
           </div>
           {this.state.page === 1 &&
             <div className="picture-container">

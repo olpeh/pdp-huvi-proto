@@ -7,40 +7,13 @@
 	height: 100%;
 	padding: $base-padding-horizontal $base-padding-vertical;
 
-	/*.back {
-		a {
-			text-decoration: none;
-			background-color: white;
-		}
-		}*/
-
 		.report-garment {
 			margin-top: $base-margin-vertical*2; 
 			margin-bottom: $base-margin-vertical*2; 
 			background-color: $secondary-background-color;
 			padding: $base-padding-vertical 4*$base-padding-horizontal;
 			@include box-shadow();
-			.garment-info {
-				.columns {
-					display: flex;
-					flex-direction: row;
-					.left {
-						.icon {
-							@include box-shadow();
-							background-color: $img-background-color;
-							padding: $base-padding;
-							img {
-
-								width: $img-base-size*0.9;
-								height: $img-base-size*0.9;
-							}
-						}
-					}
-					.right {
-						padding-left: $base-padding-horizontal;
-					}
-				}
-			}
+			
 
 			.picture-container {
 					.picture {
@@ -53,8 +26,6 @@
 							max-height: 100%;
 						}
 					}
-				
-
 			}
 
 
@@ -78,35 +49,7 @@
 						border-radius: 1vw;
 
 					}
-
 				}
-			}
-
-			.submit-container {
-				
-				/*.complaint {
-					display: flex;
-					flex-direction: row;
-					justify-content: center;
-					align-items: center;
-					.complaint-description {
-						display: flex;
-						flex-direction: column;
-
-					}
-					a {
-					font-weight: bold;
-					text-decoration: none;
-					padding: $base-padding-horizontal*1 $base-padding-vertical*1.5;
-					background-color: $secondary-background-color * 1.05;
-					color: white;
-					@include box-shadow();
-					margin-left: $base-margin;
-					margin-right:	$base-margin;
-					} 
-				}*/
-
-
 			}
 
 			.submitted-container {
@@ -175,8 +118,6 @@
 				}
 			}
 			
-
-
 			.title {
 				padding: $base-padding-horizontal 0;
 				font-weight: bold;
@@ -209,13 +150,6 @@
 					color: $secondary-background-color * 1.05;
 					background-color: white;
 				}	
-
-
 			}
-
-
-
-
-
 		}
 	}
