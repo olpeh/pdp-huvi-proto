@@ -81,7 +81,7 @@ class ReportPage extends React.Component {
               <div className="garment-picture">
 
                 <div className="picture">
-                  <img src={require('../img/camera.png')} alt="" />
+                  <img src={require('../img/broken-overalls-example.jpg')} alt="" />
                 </div>
                 <a onClick={this.takePicture} className="edit-picture">Edit</a>
 
@@ -104,7 +104,7 @@ class ReportPage extends React.Component {
               <div className="garment-picture">
 
                 <div className="picture">
-                  <img src={require('../img/camera.png')} alt="" />
+                  <img src={require('../img/broken-overalls-example.jpg')} alt="" />
                 </div>
                 <a onClick={this.takePicture} className="edit-picture">Edit</a>
 
@@ -131,7 +131,7 @@ class ReportPage extends React.Component {
               <div className="garment-picture">
 
                 <div className="picture">
-                  <img src={require('../img/camera.png')} alt="" />
+                  <img src={require('../img/broken-overalls-example.jpg')} alt="" />
                 </div>
 
               </div>
