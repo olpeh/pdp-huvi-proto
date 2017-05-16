@@ -40,7 +40,7 @@ class ReportPage extends React.Component {
   }
 
   addDescription() {
-    this.setState({ page: 2});
+    this.setState({ page: 2 });
   }
 
   submitDescription() {
@@ -81,7 +81,10 @@ class ReportPage extends React.Component {
               <div className="garment-picture">
 
                 <div className="picture">
-                  <img src={require('../img/broken-overalls-example.jpg')} alt="" />
+                  <img
+                    src={require('../img/broken-overalls-example.jpg')}
+                    alt=""
+                  />
                 </div>
                 <a onClick={this.takePicture} className="edit-picture">Edit</a>
 
@@ -104,7 +107,10 @@ class ReportPage extends React.Component {
               <div className="garment-picture">
 
                 <div className="picture">
-                  <img src={require('../img/broken-overalls-example.jpg')} alt="" />
+                  <img
+                    src={require('../img/broken-overalls-example.jpg')}
+                    alt=""
+                  />
                 </div>
                 <a onClick={this.takePicture} className="edit-picture">Edit</a>
 
@@ -131,7 +137,10 @@ class ReportPage extends React.Component {
               <div className="garment-picture">
 
                 <div className="picture">
-                  <img src={require('../img/broken-overalls-example.jpg')} alt="" />
+                  <img
+                    src={require('../img/broken-overalls-example.jpg')}
+                    alt=""
+                  />
                 </div>
 
               </div>
