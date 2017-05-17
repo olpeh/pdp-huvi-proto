@@ -30,7 +30,10 @@ const Footer = ({ location }) => {
     <div className="Footer">
       <div className="Footer-nav">
         {linkArray.map(item => {
-          const classes = `Footer-nav-link ${location.pathname === item.path ? 'active' : ''}`;
+          let classes = `Footer-nav-link ${location.pathname === item.path ? 'active' : ''}`;
+          if (location.pathname.indexOf('chat') !== -1 && item.path === '/contact') {
+            classes = 'Footer-nav-link active';
+          }
           const iconClasses = `Footer-nav-link-icon ${item.iconClasS}`;
           return (
             <Link className={classes} to={item.path} key={item.iconClasS}>
